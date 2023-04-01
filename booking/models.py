@@ -30,7 +30,7 @@ TIME_CHOICES = (
 
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookings")
-    table_number = models.IntegerField(choices=TABLES_AVAILABLE)
+    table_number = models.IntegerField(null=True, blank=True)
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, default="5:00 PM")
     time_ordered = models.DateTimeField(default=datetime.now, blank=True)
