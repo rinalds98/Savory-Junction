@@ -1,9 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
-from django.views.generic.edit import UpdateView
-from django.views.generic import TemplateView
-from django.views.generic import ListView
-from django.views.generic.edit import DeleteView
+from django.views.generic import *
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Booking, TABLES_AVAILABLE
