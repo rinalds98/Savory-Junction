@@ -7,14 +7,17 @@ from datetime import datetime
 
 
 class IndexView(TemplateView):
+    # Loads the home page template
     template_name = 'index.html'
 
 
 class MenuView(TemplateView):
+    # Loads the menu template
     template_name = 'menu.html'
 
 
 class BookingList(CreateView):
+    # This view creates a form so the user can create a reservation
     model = Booking
     fields = ['day', 'time']
     template_name = 'reservations.html'
@@ -57,6 +60,7 @@ class BookingList(CreateView):
 
 
 class Reservations(ListView):
+    # Shows a list of bookings the user has created
     model = Booking
     template_name = 'mybookings.html'
     context_object_name = 'bookings'
@@ -66,6 +70,7 @@ class Reservations(ListView):
 
 
 class BookingDelete(DeleteView):
+    # Deletes a booking
     model = Booking
     success_url = reverse_lazy('bookings')
 
@@ -75,6 +80,7 @@ class BookingDelete(DeleteView):
 
 
 class BookingUpdate(UpdateView):
+    # a user can update an existing booking
     model = Booking
     fields = ['day', 'time']
     template_name = 'reservations.html'
