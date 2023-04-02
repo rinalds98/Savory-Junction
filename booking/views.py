@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
+from django.views.generic.edit import UpdateView
 from django.views.generic import TemplateView
 from django.views.generic import ListView
 from django.views.generic.edit import DeleteView
@@ -75,3 +76,17 @@ class BookingDelete(DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, 'Booking deleted successfully.')
         return super().delete(request, *args, **kwargs)
+
+
+class BookingUpdate(UpdateView):
+    model = Booking
+    fields = ['day', 'time']
+    template_name = 'reservations.html'
+    success_url = reverse_lazy('bookings')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['booking_id'] = self.kwargs['pk']
+        return context
+
+        return super().form_valid(form)
