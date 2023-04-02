@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView
+from django.views.generic import ListView
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Booking, TABLES_AVAILABLE
@@ -53,3 +54,12 @@ class BookingList(CreateView):
         form.instance.time_ordered = datetime.now()
 
         return super().form_valid(form)
+
+
+class Reservations(ListView):
+    model = Booking
+    template_name = 'mybookings.html'
+    context_object_name = 'bookings'
+
+    def get_queryset(self):
+        return Booking.objects.filter(user=self.request.user)
