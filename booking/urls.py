@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='home'),
     path('reservations.html', views.BookingList.as_view(), name='reservations'),
     path('menu.html', views.MenuView.as_view(), name='menu'),
-    path('mybookings.html', views.Reservations.as_view(), name='bookings')
+    path('mybookings.html', views.Reservations.as_view(), name='bookings'),
+    path('delete/<int:pk>/', views.BookingDelete.as_view(), name='delete_booking'),
 ]

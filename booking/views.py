@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView
 from django.views.generic import ListView
+from django.views.generic.edit import DeleteView
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Booking, TABLES_AVAILABLE
@@ -20,7 +21,7 @@ class BookingList(CreateView):
     model = Booking
     fields = ['day', 'time']
     template_name = 'reservations.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('reservations')
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class)
@@ -53,6 +54,8 @@ class BookingList(CreateView):
         # Set the time of the booking
         form.instance.time_ordered = datetime.now()
 
+        messages.success(self.request, 'Booking successfully Made.')
+
         return super().form_valid(form)
 
 
@@ -63,3 +66,12 @@ class Reservations(ListView):
 
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
+
+
+class BookingDelete(DeleteView):
+    model = Booking
+    success_url = reverse_lazy('bookings')
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, 'Booking deleted successfully.')
+        return super().delete(request, *args, **kwargs)

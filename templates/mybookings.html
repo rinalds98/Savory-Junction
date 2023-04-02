@@ -3,13 +3,20 @@
 {% block content %}
 <h1>Booking List</h1>
 {% if bookings %}
-<h3>These are the following bookings that you have made with us</h3>
-    <ul>
-        {% for booking in bookings %}
-            <li>{{ booking.user }} - Table {{ booking.table_number }}</li>
-        {% endfor %}
-    </ul>
+    {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.day }}</td>
+            <td>{{ booking.time }}</td>
+            <td>
+                <form action="{% url 'delete_booking' booking.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
 {% else %}
     <p>No bookings found.</p>
 {% endif %}
 {% endblock %}
+
