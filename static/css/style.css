@@ -1,19 +1,32 @@
-
+/*Home Page -- index.html*/
 .home-wrapper {
     background-color: black;
     width: 100%;
     position: relative;
 }
+
+.img {
+    width: 100%;
+    z-index: 0;
+}
+
+#front-page {
+    opacity: 0.5;
+}
+
 .front-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .about-us {
     margin: 10px 20px;
 }
 
+
+/*Create A Booking -- reservations.html*/
 .booking-form {
     width: 50%;
     border: 3px solid black;
@@ -23,18 +36,21 @@
     margin-top: 10px;
 }
 
-.img {
-    width:100%;
-    z-index: 0;
+
+/* Manage Bookings -- mybookings.html*/
+.actions {
+    display: flex;
 }
 
-#front-page {
-    opacity: 0.5;
+.actions a {
+    margin-right: 5px;
 }
 
+
+/*Mobile View*/
 @media screen and (min-width:900px) {
 
-    #food-menu{
+    #food-menu {
         width: 50%;
         z-index: 0;
         margin: 0 auto;

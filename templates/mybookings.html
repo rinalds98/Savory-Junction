@@ -17,8 +17,7 @@
             <th scope="col">#</th>
             <th scope="col">Date</th>
             <th scope="col">Time</th>
-            <th scope="col">Update</th>
-            <th scope="col">Delete</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
 
@@ -28,12 +27,14 @@
             <th scope="row">{{ forloop.counter }}</th>
             <td>{{ booking.day }}</td>
             <td>{{ booking.time }}</td>
-            <td><a href="{% url 'update_booking' booking.pk%}" class="btn btn-primary btn-sm">Update</a></td>
             <td>
-                <form action="{% url 'delete_booking' booking.id %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                </form>
+                <div class="actions">
+                    <a href="{% url 'update_booking' booking.pk%}" class="btn btn-primary btn-sm">Update</a>
+                    <form action="{% url 'delete_booking' booking.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </div>
             </td>
         </tr>
         {% endfor %}
