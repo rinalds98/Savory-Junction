@@ -1,29 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Your Reservations</h1>
+<div class="text-center">
+    <h2>Your Reservations</h2>
 
     {% if request.user.is_authenticated %}
-        <p>Welcome, {{ request.user.username }}!</p>
+    <h4>Welcome, {{ request.user.username }}!</h4>
     {% endif %}
+</div>
+{% if bookings %}
+<p class="text-center">These are your current restaurant bookings made with us:</p>
 
-    {% if bookings %}
-        <p>These are your current restaurant bookings made with us:</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
         {% for booking in bookings %}
-            <tr>
-                <td>{{ booking.day }}</td>
-                <td>{{ booking.time }}</td>
-                <td>
-                    <form action="{% url 'delete_booking' booking.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
-                </td>
-                <td><a href="{% url 'update_booking' booking.pk%}">Update</a></td>
-            </tr>
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ booking.day }}</td>
+            <td>{{ booking.time }}</td>
+            <td><a href="{% url 'update_booking' booking.pk%}">Update</a></td>
+            <td>
+                <form action="{% url 'delete_booking' booking.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
         {% endfor %}
-    {% else %}
-        <p>No bookings found.</p>
-    {% endif %}
+    </tbody>
+</table>
+{% else %}
+<p>No bookings found.</p>
+{% endif %}
 {% endblock %}
-
