@@ -28,7 +28,7 @@
             <th scope="row">{{ forloop.counter }}</th>
             <td>{{ booking.day }}</td>
             <td>{{ booking.time }}</td>
-            <td><a href="{% url 'update_booking' booking.pk%}">Update</a></td>
+            <td><a href="{% url 'update_booking' booking.pk%}" class="btn btn-primary btn-sm">Update</a></td>
             <td>
                 <form action="{% url 'delete_booking' booking.id %}" method="post">
                     {% csrf_token %}

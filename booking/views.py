@@ -11,9 +11,9 @@ class IndexView(TemplateView):
     template_name = 'index.html'
 
 
-class MenuView(TemplateView):
+#class MenuView(TemplateView):
     # Loads the menu template
-    template_name = 'menu.html'
+#    template_name = 'menu.html'
 
 
 class BookingList(CreateView):
