@@ -66,7 +66,7 @@ class Reservations(ListView):
     context_object_name = 'bookings'
 
     def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
+        return Booking.objects.filter(user=self.request.user).order_by('day', 'time')
 
 
 class BookingDelete(DeleteView):
