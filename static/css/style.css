@@ -41,7 +41,6 @@
     max-width: 400px;
     padding: 30px;
     margin: auto;
-
     border-radius: 5px;
     color: #fff;
 }
@@ -59,6 +58,12 @@
 
 .actions a {
     margin-right: 5px;
+}
+
+
+/*Sign Out Page -- logout.html*/
+.signout-wrapper {
+    padding: 40px;
 }
 
 
