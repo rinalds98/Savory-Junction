@@ -3,27 +3,30 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <div class= booking-form>
-        <h1>Book a table</h1>
-        <form method="post">
-        {% csrf_token %}
-        <div class="mb-3">
-            <label class="form-label" for="{{ form.day.id_for_label }}">Please select a date when you would like to book a reservation for:</label>
-            <div>
-            {{ form.day }}
+<div class="booking-wrapper">
+    <div class="form-input text-center">
+        <form method="post" class="signup-form">
+            {% csrf_token %}
+            <h1>Make Your Reservation</h1>
+            <div class="mb-3">
+                <label class="form-label" for="{{ form.day.id_for_label }}">Please select a date when you would like to
+                    book a reservation for:</label>
+                <div>
+                    {{ form.day }}
+                </div>
             </div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="{{ form.time.id_for_label }}">Please select a time:</label>
-            <div>
-            {{ form.time }}
+            <div class="mb-3">
+                <label class="form-label" for="{{ form.time.id_for_label }}">Please select a time:</label>
+                <div>
+                    {{ form.time }}
+                </div>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Reserve</button>
         </form>
     </div>
+</div>
 
 {% else %}
-    <h1> please log in to be able to make a reservation</h1>
+<h1> please log in to be able to make a reservation</h1>
 {% endif %}
 {% endblock %}

@@ -25,7 +25,8 @@ class BookingList(CreateView):
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class)
-        form.fields['day'].widget.attrs.update({'id': 'datepicker'})
+        form.fields['day'].widget.attrs.update({'id': 'datepicker',
+                                                'class' : 'text-center'})
         return form
 
     def form_valid(self, form):
