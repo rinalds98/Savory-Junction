@@ -61,12 +61,27 @@
 }
 
 
-/*Sign Out Page -- logout.html*/
+/* Sign Out Page -- logout.html */
 .signout-wrapper {
     padding: 40px;
 }
 
+/* Sign Up Page -- signup.html */
+.signup-wrapper {
+    width: 100%;
+}
 
+.signup-wrapper p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 /*Mobile View*/
 @media screen and (min-width:900px) {
 
