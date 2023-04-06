@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -16,14 +15,65 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Booking',
+            name="Booking",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('table_number', models.IntegerField(choices=[(1, 'Table 1'), (2, 'Table 2'), (3, 'Table 3'), (4, 'Table 4'), (5, 'Table 5'), (6, 'Table 6'), (7, 'Table 7'), (8, 'Table 8'), (9, 'Table 9'), (10, 'Table 10')])),
-                ('day', models.DateField(default=datetime.datetime.now)),
-                ('time', models.CharField(choices=[('5:00 PM', '5:00 PM'), ('5:30 PM', '5:30 PM'), ('6:00 PM', '6:00 PM'), ('6:30 PM', '6:30 PM'), ('7:00 PM', '7:00 PM'), ('7:30 PM', '7:30 PM'), ('8:00 PM', '8:00 PM'), ('8:30 PM', '8:30 PM'), ('9:00 PM', '9:00 PM')], default='5:00 PM', max_length=10)),
-                ('time_ordered', models.DateTimeField(blank=True, default=datetime.datetime.now)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='bookings', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "table_number",
+                    models.IntegerField(
+                        choices=[
+                            (1, "Table 1"),
+                            (2, "Table 2"),
+                            (3, "Table 3"),
+                            (4, "Table 4"),
+                            (5, "Table 5"),
+                            (6, "Table 6"),
+                            (7, "Table 7"),
+                            (8, "Table 8"),
+                            (9, "Table 9"),
+                            (10, "Table 10"),
+                        ]
+                    ),
+                ),
+                ("day", models.DateField(default=datetime.datetime.now)),
+                (
+                    "time",
+                    models.CharField(
+                        choices=[
+                            ("5:00 PM", "5:00 PM"),
+                            ("5:30 PM", "5:30 PM"),
+                            ("6:00 PM", "6:00 PM"),
+                            ("6:30 PM", "6:30 PM"),
+                            ("7:00 PM", "7:00 PM"),
+                            ("7:30 PM", "7:30 PM"),
+                            ("8:00 PM", "8:00 PM"),
+                            ("8:30 PM", "8:30 PM"),
+                            ("9:00 PM", "9:00 PM"),
+                        ],
+                        default="5:00 PM",
+                        max_length=10,
+                    ),
+                ),
+                (
+                    "time_ordered",
+                    models.DateTimeField(blank=True, default=datetime.datetime.now),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="bookings",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

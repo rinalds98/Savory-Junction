@@ -3,16 +3,16 @@ from django.contrib.auth.models import User
 from datetime import datetime
 
 TABLES_AVAILABLE = (
-    (1, 'Table 1'),
-    (2, 'Table 2'),
-    (3, 'Table 3'),
-    (4, 'Table 4'),
-    (5, 'Table 5'),
-    (6, 'Table 6'),
-    (7, 'Table 7'),
-    (8, 'Table 8'),
-    (9, 'Table 9'),
-    (10, 'Table 10'),
+    (1, "Table 1"),
+    (2, "Table 2"),
+    (3, "Table 3"),
+    (4, "Table 4"),
+    (5, "Table 5"),
+    (6, "Table 6"),
+    (7, "Table 7"),
+    (8, "Table 8"),
+    (9, "Table 9"),
+    (10, "Table 10"),
 )
 
 TIME_CHOICES = (
