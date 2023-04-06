@@ -41,12 +41,12 @@ class Booking(models.Model):
 
 
 class Review(models.Model):
-    customer_name = models.OneToOneField(User, on_delete=models.CASCADE)
+    user_name = models.OneToOneField(User, on_delete=models.CASCADE)
     comment = models.TextField()
     rating = models.IntegerField(default=5, validators=[MinValueValidator(1),
-                                                        MaxValueValidator(50)])
+                                                        MaxValueValidator(5)])
     date_posted = models.DateTimeField(default=datetime.now)
     booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.customer_name} - {self.rating} star rating"
+        return f"{self.user_name} - {self.rating} star rating"

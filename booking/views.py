@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import *
 from django.contrib import messages
 from django.urls import reverse_lazy
-from .models import Booking, TABLES_AVAILABLE
+from .models import Booking, TABLES_AVAILABLE, Review
 from datetime import datetime
 
 
