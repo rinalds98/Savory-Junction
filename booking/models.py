@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator, MaxValueValidator
 from datetime import datetime
 
 TABLES_AVAILABLE = (
@@ -37,3 +38,15 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - Table {self.table_number} - {self.day} - {self.time}"
+
+
+class Review(models.Model):
+    customer_name = models.OneToOneField(User, on_delete=models.CASCADE)
+    comment = models.TextField()
+    rating = models.IntegerField(default=5, validators=[MinValueValidator(1),
+                                                        MaxValueValidator(50)])
+    date_posted = models.DateTimeField(default=datetime.now)
+    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.customer_name} - {self.rating} star rating"
