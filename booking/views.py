@@ -10,6 +10,12 @@ class IndexView(TemplateView):
     # Loads the home page template
     template_name = "index.html"
 
+    # Gets the reviews
+    def get_context_data(self, **kwargs):
+        review = super().get_context_data(**kwargs)
+        review['reviews'] = Review.objects.select_related('user_name').all()
+        return review
+
 
 # class MenuView(TemplateView):
 # Loads the menu template

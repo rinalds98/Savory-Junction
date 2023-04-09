@@ -50,4 +50,11 @@
     </div>
   </div>
 </div>
+<div class="reviews">
+  {% for review in reviews %}
+  <h3>{{ review.user_name }}</h3>
+  <p>{{ review.rating }} stars</p>
+  <p>{{ review.comment }}</p>
+  {% endfor %}
+</div>
 {% endblock %}
