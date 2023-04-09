@@ -12,37 +12,30 @@ class IndexView(TemplateView):
     # Loads the home page template
     template_name = "index.html"
 
-    # Gets the reviews
+    # gets reviews
     def get_context_data(self, **kwargs):
         review = super().get_context_data(**kwargs)
         review["reviews"] = Review.objects.all()
-        review['review_form'] = ReviewForm()
+        review["review_form"] = ReviewForm()
         return review
 
-    # post the review
+    # Posts Review
     def post(self, request, *args, **kwargs):
         form = ReviewForm(request.POST)
 
         if form.is_valid():
-
             if Review.objects.filter(user_name=request.user).exists():
                 messages.warning(request, "You have already made a review")
-                return redirect('home')
+                return redirect("home")
 
             review = form.save(commit=False)
             review.user_name = request.user
             review.save()
-            return redirect('home')
+            return redirect("home")
         else:
             review = self.get_context_data(**kwargs)
-            review['review_form'] = form
+            review["review_form"] = form
             return self.render_to_response(review)
-
-
-
-# class MenuView(TemplateView):
-# Loads the menu template
-#    template_name = 'menu.html'
 
 
 class BookingList(CreateView):
@@ -106,7 +99,9 @@ class Reservations(ListView):
     context_object_name = "bookings"
 
     def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user).order_by("day", "time")
+        return Booking.objects.filter(user=self.request.user).order_by(
+                                                                       "day",
+                                                                       "time")
 
 
 class BookingDelete(DeleteView):

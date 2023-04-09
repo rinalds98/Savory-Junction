@@ -5,15 +5,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('booking', '0004_auto_20230406_2126'),
+        ("booking", "0004_auto_20230406_2126"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='Reviews',
-            new_name='Review',
+            old_name="Reviews",
+            new_name="Review",
         ),
     ]
