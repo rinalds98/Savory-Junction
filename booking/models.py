@@ -46,7 +46,7 @@ class Review(models.Model):
     rating = models.IntegerField(default=5, validators=[MinValueValidator(1),
                                                         MaxValueValidator(5)])
     date_posted = models.DateTimeField(default=datetime.now)
-    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
+    #booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.user_name} - {self.rating} star rating"

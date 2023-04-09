@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.views.generic import *
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Booking, TABLES_AVAILABLE, Review
+from .forms import ReviewForm
 from datetime import datetime
 
 
@@ -13,8 +15,29 @@ class IndexView(TemplateView):
     # Gets the reviews
     def get_context_data(self, **kwargs):
         review = super().get_context_data(**kwargs)
-        review['reviews'] = Review.objects.select_related('user_name').all()
+        review["reviews"] = Review.objects.all()
+        review['review_form'] = ReviewForm()
         return review
+
+    # post the review
+    def post(self, request, *args, **kwargs):
+        form = ReviewForm(request.POST)
+
+        if form.is_valid():
+
+            if Review.objects.filter(user_name=request.user).exists():
+                messages.warning(request, "You have already made a review")
+                return redirect('home')
+
+            review = form.save(commit=False)
+            review.user_name = request.user
+            review.save()
+            return redirect('home')
+        else:
+            review = self.get_context_data(**kwargs)
+            review['review_form'] = form
+            return self.render_to_response(review)
+
 
 
 # class MenuView(TemplateView):

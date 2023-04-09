@@ -57,4 +57,25 @@
   <p>{{ review.comment }}</p>
   {% endfor %}
 </div>
+<div class="review-wrapper">
+  <div class="form-input text-center">
+    <form method="post" class="signup-form">
+      {% csrf_token %}
+      <h1>Leave a review</h1>
+      <div class="mb-3">
+          <label class="form-label" for="{{ review_form.rating.id_for_label }}">How would you rate your experience:</label>
+          <div>
+              {{ review_form.rating}}
+          </div>
+      </div>
+      <div class="mb-3">
+          <label class="form-label" for="{{ review_form.comment.id_for_label }}">Leave a comment:</label>
+          <div>
+              {{ review_form.comment }}
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Leave Review</button>
+  </form>
+  </div>
+</div>
 {% endblock %}
