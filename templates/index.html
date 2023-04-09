@@ -23,8 +23,7 @@
 
 <div class="menu-wrapper">
   <h2 class="text-center" id="menu">This is our menu</h2>
-      <img class="img" id="food-menu"
-        src="https://res.cloudinary.com/dgd9rq3qb/image/upload/v1680380820/menu_ocoax2.jpg">
+  <img class="img" id="food-menu" src="https://res.cloudinary.com/dgd9rq3qb/image/upload/v1680380820/menu_ocoax2.jpg">
 
   <div class="row">
 
@@ -50,12 +49,21 @@
     </div>
   </div>
 </div>
-<div class="reviews">
-  {% for review in reviews %}
-  <h3>{{ review.user_name }}</h3>
-  <p>{{ review.rating }} stars</p>
-  <p>{{ review.comment }}</p>
-  {% endfor %}
+<div class="container-fluid mt-4">
+  <h3 class="text-center text-uppercase">What our customers say about us</h3>
+  <div class="row">
+    {% for review in reviews %}
+    <div class="col">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ review.user_name }}</h5>
+          <p class="card-text">{{ review.comment }}</p>
+          <p>{{ review.rating }} stars</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 <div class="review-wrapper">
   <div class="form-input text-center">
@@ -63,19 +71,23 @@
       {% csrf_token %}
       <h1>Leave a review</h1>
       <div class="mb-3">
-          <label class="form-label" for="{{ review_form.rating.id_for_label }}">How would you rate your experience:</label>
-          <div>
-              {{ review_form.rating}}
-          </div>
+        <label class="form-label" for="{{ review_form.rating.id_for_label }}">How would you rate your
+          experience:</label>
+        <div>
+          {{ review_form.rating}}
+        </div>
       </div>
       <div class="mb-3">
-          <label class="form-label" for="{{ review_form.comment.id_for_label }}">Leave a comment:</label>
-          <div>
-              {{ review_form.comment }}
-          </div>
+        <label class="form-label" for="{{ review_form.comment.id_for_label }}">Leave a comment:</label>
+        <div>
+          {{ review_form.comment }}
+        </div>
       </div>
       <button type="submit" class="btn btn-primary">Leave Review</button>
-  </form>
+    </form>
   </div>
 </div>
+
+
+
 {% endblock %}
