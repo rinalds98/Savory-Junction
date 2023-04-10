@@ -78,10 +78,10 @@
       {% csrf_token %}
       <h1>Leave a review</h1>
       <div class="mb-3">
-        <label class="form-label" for="{{ review_form.rating.id_for_label }}">How would you rate your
-          experience:</label>
-        <div>
-          {{ review_form.rating}}
+        <div class="rate">
+          {% for radio in review_form.rating %}
+          {{ radio }}
+          {% endfor %}
         </div>
       </div>
       <div class="mb-3">
@@ -99,5 +99,9 @@
 </div>
 
 
-
 {% endblock %}
+
+<label>
+  <input type="radio" id="star1" name="stars" for="{{ review_form.rating.id_for_label }}" value="1" />
+  <span class="icon">★</span>
+</label>
