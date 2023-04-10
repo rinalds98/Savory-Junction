@@ -29,17 +29,17 @@
                 <td>{{ booking.time }}</td>
                 <td>
                     <div class="actions">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update-reservation">
                             Update
                         </button>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="update" tabindex="-1" aria-labelledby="update-reservation"
+                        <div class="modal fade" id="update-reservation" tabindex="-1" aria-labelledby="confirm-update"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="confirm-selection">Confirm Selection</h5>
+                                        <h5 class="modal-title" id="confirm-update">Confirm Selection</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -62,7 +62,7 @@
                                 data-bs-target="#delete-booking">Delete
                             </button>
                             <!-- Modal -->
-                            <div class="modal fade" id="delete-booking" tabindex="-1" aria-labelledby="delete-booking"
+                            <div class="modal fade" id="delete-booking" tabindex="-1" aria-labelledby="confirm-delete"
                                 aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -94,29 +94,3 @@
 <p>No bookings found.</p>
 {% endif %}
 {% endblock %}
-
-
-<!-- Button trigger modal -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update">
-    Update
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="update" tabindex="-1" aria-labelledby="update-reservation" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirm-selection">Confirm Selection</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure you want to update your booking?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Keep</button>
-                <a href="{% url 'update_booking' booking.pk%}" class="btn btn-danger btn-sm">Update</a>
-            </div>
-        </div>
-    </div>
-</div>
