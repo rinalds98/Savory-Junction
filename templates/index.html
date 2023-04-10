@@ -66,6 +66,7 @@
   </div>
 </div>
 <div class="review-wrapper">
+  {% if user.is_authenticated %}
   <div class="form-input text-center">
     <form method="post" class="signup-form">
       {% csrf_token %}
@@ -86,6 +87,9 @@
       <button type="submit" class="btn btn-primary">Leave Review</button>
     </form>
   </div>
+  {% else %}
+  <h3 class="text-center">Please log in if you would like to leave a review about us!</h3>
+  {% endif %}
 </div>
 
 
