@@ -7,12 +7,13 @@
       src="https://res.cloudinary.com/dgd9rq3qb/image/upload/v1680374281/homepage_mlrw5g.jpg"
       alt="Main image of the restaurant">
   </div>
-  <h1 class="text-center text-white front-text">Welcome to Savory Junction</h1>
+  <h1 class="text-center text-white front-text text-uppercase">Welcome to Savory Junction</h1>
 </div>
 <div class="container-fluid text-center mt-5">
-  <h2 class="text-center">About Us</h2>
+  <h2 class="text-center">Why We Rock</h2>
   <div class="row justify-content-around">
     <div class="col-sm-12 col-md-6 col-lg-4">
+      <h3>About Us</h3>
       <p class="text-center about-us">
         Welcome to Savory Junction, a vibrant restaurant located in the heart of the city.
         We pride ourselves on serving up a delicious fusion of international flavors and locally sourced ingredients,
@@ -24,6 +25,7 @@
     </div>
 
     <div class="col-sm-12 col-md-6 col-lg-8">
+      <h3>Our Menu</h3>
       <img class="img food-menu" src="https://res.cloudinary.com/dgd9rq3qb/image/upload/v1680380820/menu_ocoax2.jpg"
         alt="Restaurant menu">
     </div>
@@ -61,7 +63,7 @@
   <div class="row">
     {% for review in reviews %}
     <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card">
+      <div class="card mt-1 mb-1">
         <div class="card-body text-center">
           <h5 class="card-title">{{ review.user_name }}</h5>
           <p class="card-text">{{ review.comment }}</p>
@@ -84,8 +86,8 @@
     {% endfor %}
   </div>
 </div>
+{% if user.is_authenticated %}
 <div class="review-wrapper">
-  {% if user.is_authenticated %}
   <div class="form-input text-center">
     <form method="post" class="review-form">
       {% csrf_token %}
@@ -106,8 +108,11 @@
       <button type="submit" class="btn btn-primary">Leave Review</button>
     </form>
   </div>
-  {% else %}
-  <h3 class="text-center">Please log in if you would like to leave a review about us!</h3>
-  {% endif %}
 </div>
+{% else %}
+<div class="review-wrapper-log-out text-center mb-4">
+<h3 class="text-center">Please log in if you would like to leave a review about us!</h3>
+<a class="btn btn-success" href="{% url 'account_login' %}">LOG IN</a>  
+</div>
+{% endif %}
 {% endblock %}
