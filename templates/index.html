@@ -55,11 +55,11 @@
   </div>
 </div>
 
-<div class="container-fluid mt-4">
+<div class="container-fluid mt-4 mb-4">
   <h3 class="text-center">What Our Customers Say About Us</h3>
   <div class="row">
     {% for review in reviews %}
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-4">
       <div class="card">
         <div class="card-body text-center">
           <h5 class="card-title">{{ review.user_name }}</h5>
@@ -74,7 +74,7 @@
 <div class="review-wrapper">
   {% if user.is_authenticated %}
   <div class="form-input text-center">
-    <form method="post" class="signup-form">
+    <form method="post" class="review-form">
       {% csrf_token %}
       <h1>Leave a review</h1>
       <div class="mb-3">

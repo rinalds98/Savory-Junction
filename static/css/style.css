@@ -32,7 +32,25 @@ body {
     margin: 10px 20px;
 }
 
+.review-wrapper {
+    width: 100%;
+    background-image: url("https://res.cloudinary.com/dgd9rq3qb/image/upload/v1680641515/booking-page_fvddri.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
+.review-form {
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+    margin: auto;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#id_comment {
+    height: 200px;
+    border-radius: 20px;
+}
 /*Create A Booking -- reservations.html*/
 
 .booking-wrapper {
@@ -50,12 +68,6 @@ body {
     margin: auto;
     border-radius: 5px;
     color: #fff;
-}
-
-.form-input {
-    padding-top: 100px;
-
-
 }
 
 /* Manage Bookings -- mybookings.html*/
