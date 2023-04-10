@@ -99,6 +99,20 @@
     justify-content: center;
     margin-bottom: 20px;
 }
+
+/*footer --base.html*/
+.social-media-links {
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: white;
+}
+
 /*Mobile View*/
 @media screen and (min-width:900px) {
 
