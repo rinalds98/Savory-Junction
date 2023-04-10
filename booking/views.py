@@ -12,7 +12,7 @@ class IndexView(TemplateView):
     # Loads the home page template
     template_name = "index.html"
 
-    # gets reviews
+    # Gets Reviews
     def get_context_data(self, **kwargs):
         review = super().get_context_data(**kwargs)
         review["reviews"] = Review.objects.all()
@@ -121,9 +121,40 @@ class BookingUpdate(UpdateView):
     template_name = "reservations.html"
     success_url = reverse_lazy("bookings")
 
+    # Changes the day field so the custom date picker gets initialised
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class)
+        form.fields["day"].widget.attrs.update(
+            {"id": "datepicker", "class": "text-center"}
+        )
+        return form
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["booking_id"] = self.kwargs["pk"]
         return context
 
-        return super().form_valid(form)
+    def form_valid(self, form):
+        # Check if booking already exists for user and time
+        if Booking.objects.filter(user=self.request.user, day=form.cleaned_data['day'], time=form.cleaned_data['time']).exists():
+            messages.warning(self.request, 'You have already booked a table at this time.')
+            return self.form_invalid(form)
+
+        # Takes data In
+        available_tables = TABLES_AVAILABLE
+        booked_tables = Booking.objects.filter(
+            day=form.cleaned_data["day"], time=form.cleaned_data["time"]
+        ).values_list("table_number", flat=True)
+
+        # Checks if the restaurant is fully booked. If not assigns table.
+        if (len(available_tables) == len(booked_tables)):
+            messages.warning(self.request, "Sorry, all tables are booked for this time.")
+            return self.form_invalid(form)
+        else:
+            for table in available_tables:
+                if table[0] not in booked_tables:
+                    form.instance.table_number = table[0]
+                    break
+            form.instance.time_ordered = datetime.now()
+            messages.success(self.request, "Booking successfully Updated.")
+            return super().form_valid(form)
