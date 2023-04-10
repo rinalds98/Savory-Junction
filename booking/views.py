@@ -67,29 +67,24 @@ class BookingList(CreateView):
             )
             return self.form_invalid(form)
 
-        # Find available table for booking
+        # Takes data In
         available_tables = TABLES_AVAILABLE
         booked_tables = Booking.objects.filter(
             day=form.cleaned_data["day"], time=form.cleaned_data["time"]
         ).values_list("table_number", flat=True)
-        for table in available_tables:
-            if table[0] not in booked_tables:
-                form.instance.table_number = table[0]
-                break
 
-        # If all tables are booked for the given time slot
-        if not form.instance.table_number:
-            messages.warning(
-                self.request, "Sorry, all tables are booked for this time."
-            )
+        # Checks if the restaurant is fully booked. If not assigns table.
+        if (len(available_tables) == len(booked_tables)):
+            messages.warning(self.request, "Sorry, all tables are booked for this time.")
             return self.form_invalid(form)
-
-        # Set the time of the booking
-        form.instance.time_ordered = datetime.now()
-
-        messages.success(self.request, "Booking successfully Made.")
-
-        return super().form_valid(form)
+        else:
+            for table in available_tables:
+                if table[0] not in booked_tables:
+                    form.instance.table_number = table[0]
+                    break
+            form.instance.time_ordered = datetime.now()
+            messages.success(self.request, "Booking successfully Made.")
+            return super().form_valid(form)
 
 
 class Reservations(ListView):
