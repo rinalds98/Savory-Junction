@@ -76,8 +76,6 @@ body {
     color: #f2b600;
 }
 
-
-
 #id_comment {
     height: 200px;
     border-radius: 20px;
@@ -166,7 +164,7 @@ body {
 /*Mobile View*/
 @media screen and (min-width:900px) {
 
-    #food-menu {
+    .food-menu {
         width: 50%;
         z-index: 0;
         margin: 0 auto;
