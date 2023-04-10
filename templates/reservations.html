@@ -27,6 +27,13 @@
 </div>
 
 {% else %}
-<h1> please log in to be able to make a reservation</h1>
+
+<div class="container text-center mb-4 mt-4">
+    <h1>Welcome to our booking page</h1>
+    <p>To continue we will need you to either log in if you are an existing customer.</p>
+    <a class="btn btn-success" href="{% url 'account_login' %}">LOG IN</a>    
+    <p>Or if its your first time here. Please create an account before you can book a time.</p>
+    <a class="btn btn-primary" href="{% url 'account_signup' %}">REGISTER</a>
+</div>
 {% endif %}
 {% endblock %}
