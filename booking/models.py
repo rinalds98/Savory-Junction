@@ -3,6 +3,11 @@ from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from datetime import datetime
 
+# current dateTime
+now = datetime.now()
+# convert to date String
+DATE = now.strftime("%d/%m/%Y")
+
 TABLES_AVAILABLE = (
     (1, "Table 1"),
     (2, "Table 2"),
@@ -32,9 +37,9 @@ TIME_CHOICES = (
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookings")
     table_number = models.IntegerField(null=True, blank=True)
-    day = models.DateField(default=datetime.now)
+    day = models.DateField(default=DATE)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, default="5:00 PM")
-    time_ordered = models.DateTimeField(default=datetime.now, blank=True)
+    time_ordered = models.DateTimeField(default=DATE, blank=True)
 
     def __str__(self):
         return f"{self.user.username} - Table {self.table_number} - {self.day} - {self.time}"
@@ -46,7 +51,7 @@ class Review(models.Model):
     rating = models.IntegerField(
         default=5, validators=[MinValueValidator(1), MaxValueValidator(5)]
     )
-    date_posted = models.DateTimeField(default=datetime.now)
+    date_posted = models.DateTimeField(default=DATE)
 
     def __str__(self):
         return f"{self.user_name} - {self.rating} star rating"

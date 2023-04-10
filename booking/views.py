@@ -43,7 +43,7 @@ class BookingList(CreateView):
     model = Booking
     fields = ["day", "time"]
     template_name = "reservations.html"
-    success_url = reverse_lazy("reservations")
+    success_url = reverse_lazy("bookings")
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class)
@@ -68,17 +68,18 @@ class BookingList(CreateView):
             return self.form_invalid(form)
 
         # Takes data In
-        available_tables = TABLES_AVAILABLE
         booked_tables = Booking.objects.filter(
             day=form.cleaned_data["day"], time=form.cleaned_data["time"]
         ).values_list("table_number", flat=True)
 
         # Checks if the restaurant is fully booked. If not assigns table.
-        if (len(available_tables) == len(booked_tables)):
-            messages.warning(self.request, "Sorry, all tables are booked for this time.")
+        if len(TABLES_AVAILABLE) == len(booked_tables):
+            messages.warning(
+                self.request, "Sorry, all tables are booked for this time."
+            )
             return self.form_invalid(form)
         else:
-            for table in available_tables:
+            for table in TABLES_AVAILABLE:
                 if table[0] not in booked_tables:
                     form.instance.table_number = table[0]
                     break
@@ -94,9 +95,8 @@ class Reservations(ListView):
     context_object_name = "bookings"
 
     def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user).order_by(
-                                                                       "day",
-                                                                       "time")
+        return Booking.objects.filter(
+            user=self.request.user).order_by("day", "time")
 
 
 class BookingDelete(DeleteView):
@@ -131,22 +131,29 @@ class BookingUpdate(UpdateView):
 
     def form_valid(self, form):
         # Check if booking already exists for user and time
-        if Booking.objects.filter(user=self.request.user, day=form.cleaned_data['day'], time=form.cleaned_data['time']).exists():
-            messages.warning(self.request, 'You have already booked a table at this time.')
+        if Booking.objects.filter(
+            user=self.request.user,
+            day=form.cleaned_data["day"],
+            time=form.cleaned_data["time"],
+        ).exists():
+            messages.warning(
+                self.request, "You have already booked a table at this time."
+            )
             return self.form_invalid(form)
 
         # Takes data In
-        available_tables = TABLES_AVAILABLE
         booked_tables = Booking.objects.filter(
             day=form.cleaned_data["day"], time=form.cleaned_data["time"]
         ).values_list("table_number", flat=True)
 
         # Checks if the restaurant is fully booked. If not assigns table.
-        if (len(available_tables) == len(booked_tables)):
-            messages.warning(self.request, "Sorry, all tables are booked for this time.")
+        if len(TABLES_AVAILABLE) == len(booked_tables):
+            messages.warning(
+                self.request, "Sorry, all tables are booked for this time."
+            )
             return self.form_invalid(form)
         else:
-            for table in available_tables:
+            for table in TABLES_AVAILABLE:
                 if table[0] not in booked_tables:
                     form.instance.table_number = table[0]
                     break
