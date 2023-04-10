@@ -27,6 +27,7 @@ class IndexView(TemplateView):
             if Review.objects.filter(user_name=request.user).exists():
                 messages.warning(request, "You have already made a review")
                 return redirect("home")
+
             review = form.save(commit=False)
             review.user_name = request.user
             review.save()

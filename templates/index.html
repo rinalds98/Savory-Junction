@@ -64,7 +64,18 @@
         <div class="card-body text-center">
           <h5 class="card-title">{{ review.user_name }}</h5>
           <p class="card-text">{{ review.comment }}</p>
-          <p>{{ review.rating }} stars</p>
+          <p class="card-text star">
+            {% if review.rating == 1 %}
+            <i class="fa fa-star"></i>
+            {% elif review.rating == 2 %}
+            <i class="fa fa-star"></i><i class="fa fa-star"></i>
+            {% elif review.rating == 3 %}
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            {% elif review.rating == 4 %}
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            {% elif review.rating == 5 %}
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            {% endif %}
         </div>
       </div>
     </div>
@@ -100,8 +111,3 @@
 
 
 {% endblock %}
-
-<label>
-  <input type="radio" id="star1" name="stars" for="{{ review_form.rating.id_for_label }}" value="1" />
-  <span class="icon">★</span>
-</label>
