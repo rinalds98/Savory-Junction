@@ -59,11 +59,22 @@
       </div>
     </nav>
   </header>
-  {% if messages %}
-  {% for message in messages %}
-  <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-  {% endfor %}
-  {% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+          </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
   <main>
     {% block content %}
 
@@ -73,29 +84,29 @@
   <footer class="footer mt-auto py-3 bg-dark" data-bs-theme="dark">
     <p class="text-center text-white">Made by Rinalds Zimelis</p>
     <div class="icon-wrapper">
-    <ul class="social-media-links">
-      <li>
-        <a href="https://www.facebook.com" target="_blank"
-          aria-label="A link that opens a new tab and brings you to facebook.com"><i
-            class="fa-brands fa-facebook"></i></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com" target="_blank"
-          aria-label="A link that opens a new tab and brings you to instagram.com"><i
-            class="fa-brands fa-instagram"></i></a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com" target="_blank"
-          aria-label="A link that opens a new tab and brings you to youtube.com"><i
-            class="fa-brands fa-youtube"></i></a>
-      </li>
-      <li>
-        <a href="https://www.twitter.com" target="_blank"
-          aria-label="A link that opens a new tab and brings you to twitter.com"><i
-            class="fa-brands fa-twitter"></i></a>
-      </li>
-    </ul>
-  </div>
+      <ul class="social-media-links">
+        <li>
+          <a href="https://www.facebook.com" target="_blank"
+            aria-label="A link that opens a new tab and brings you to facebook.com"><i
+              class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank"
+            aria-label="A link that opens a new tab and brings you to instagram.com"><i
+              class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com" target="_blank"
+            aria-label="A link that opens a new tab and brings you to youtube.com"><i
+              class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" target="_blank"
+            aria-label="A link that opens a new tab and brings you to twitter.com"><i
+              class="fa-brands fa-twitter"></i></a>
+        </li>
+      </ul>
+    </div>
   </footer>
 </body>
 

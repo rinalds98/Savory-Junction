@@ -10,36 +10,37 @@
 </div>
 {% if bookings %}
 <p class="text-center">These are your current restaurant bookings made with us:</p>
+<div class="table-wrapper">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
 
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Date</th>
-            <th scope="col">Time</th>
-            <th scope="col">Actions</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        {% for booking in bookings %}
-        <tr>
-            <th scope="row">{{ forloop.counter }}</th>
-            <td>{{ booking.day }}</td>
-            <td>{{ booking.time }}</td>
-            <td>
-                <div class="actions">
-                    <a href="{% url 'update_booking' booking.pk%}" class="btn btn-primary btn-sm">Update</a>
-                    <form action="{% url 'delete_booking' booking.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
-                </div>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ booking.day }}</td>
+                <td>{{ booking.time }}</td>
+                <td>
+                    <div class="actions">
+                        <a href="{% url 'update_booking' booking.pk%}" class="btn btn-primary btn-sm">Update</a>
+                        <form action="{% url 'delete_booking' booking.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% else %}
 <p>No bookings found.</p>
 {% endif %}
