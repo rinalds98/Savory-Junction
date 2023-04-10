@@ -106,7 +106,7 @@ body {
     display: flex;
 }
 
-.actions a {
+.actions button {
     margin-right: 5px;
 }
 
