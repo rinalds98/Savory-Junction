@@ -30,6 +30,10 @@ body {
 
 .about-us {
     margin: 10px 20px;
+    padding: 0 10px;
+}
+.experience {
+    padding: 0 30px;
 }
 
 .review-wrapper {
