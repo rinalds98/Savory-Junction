@@ -46,19 +46,22 @@ body {
     border-radius: 5px;
     color: #fff;
 }
+
 .star {
     color: #f2b600
 }
-/*stars */
+
+/* Star review selection --index.html */
+
+.rate input[type=radio] {
+    opacity: 0;
+}
+
 .rate {
     display: flex;
     padding: 20px;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
-}
-
-.rate input[type=radio] {
-    display: none;
 }
 
 .rate > label:before {
@@ -71,16 +74,26 @@ body {
 }
 
 .rate label:hover,
-.rate label:hover ~ label,
-.rate input[type=radio]:checked + label {
+.rate label:hover ~ label {
     color: #f2b600;
 }
 
+label:focus-within {
+    color: #f2b600;
+}
+
+label:focus-within ~ label:before {
+    color: #f2b600;
+}
+
+/* text area - Review section --index.html */
 #id_comment {
     height: 200px;
     border-radius: 20px;
 }
+
 /*Create A Booking -- reservations.html*/
+
 .booking-wrapper {
     width: 100%;
     height: 800px;
