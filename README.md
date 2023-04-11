@@ -1,108 +1,187 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Savory Junction
+=
 
-Welcome rinalds98,
+Introduction
+=
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+explanation
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+explantion
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+The website can be viewed here: [Expense Tracker](https://savory-junction-rz.herokuapp.com/ "javory Junction").
 
-A blue button should appear to click: _Make Public_,
+# Table of contents
+- [User Experience](#userexperience)
+- [How To Use](#how-to-use)
+- [Features](#features)
+- [Future Ideas / Development](#future)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies)
+- [Credits](#credits)
 
-Another blue button should appear to click: _Open Browser_.
+<div id='userexperience'/>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+User Experience
+=
 
-A blue button should appear to click: _Make Public_,
+## **User Stories**
+- ## **As an app owner I want that:**
 
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
+    1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 ------
 
-## Release History
+- ## **As an app user I want:**
+    1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+ ------
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- ## **As a returning app user I want:**
+    1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+# 1. Strategy
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# 2. Scope
+- ALorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+# 3. Structure
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# 4. Skeleton
+## **Design**
+- The initial design was made using Lucid Charts.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![Lucid Charts](#)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# 5. Surface
+ - ## **Color**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<div id='how-to-use'/>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+How To Use
+=
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Data Used
+ - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+ ## - Income Data
+ ![photo](#) 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ ## - Expense Data
+ ![photo](#)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# 1. Upon Accessing Site
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+# 2. Home Page
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+# 3. Options
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+<div id='features'/>
 
-## FAQ about the uptime script
+Features
+=
 
-**Why have you added this script?**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- ## **HOMEPAGE**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+    
+    ![home page](#)
 
-**How will this affect me?**
+- ## **bookings**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+    ![bookings](#)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- ## **Validation**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+    ![modal](#)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<div id='future'/>
 
-**So….?**
+Future Development
+=
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## **Further Development**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
 
-**Can I opt out?**
+ ## **Reasons they are not currently not implemented**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+<div id='testing'/>
 
-**Anything more?**
+Testing
+=
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## **Solved Bugs**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
 
----
+## **Unfixed Bugs**
+- No bugs remaining.
 
-Happy coding!
+## **Validator Testing**
+
+- **Testing**
+    - PEP8online.com was down during testing so I installed pycodestyle in VSCode. Then I searched for Linter and selected 'pycodestyle'. This showed if I had any errors which as of deployment is error-free.
+    - The 3 problems that are shown are not related to the project itself. They are from the Code Institute template.
+    
+    ![Linter Check](assets/images/errorfree.png)
+
+## **Manual Testing**
+The Following was tested manually and passed:
+
+- **Username Input**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+- **Options**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+- **BOOKINGS**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+
+<div id='deployment'/>
+
+Deployment
+=
+
+**The app was deployed using Code Institute's mock terminal for Heroku. The steps to deploy are as follows:**
+- Create a new Heroku app.
+- Set the buildbacks for Python and NodeJS in that order.
+- Link the Heroku app to the repository.
+- Click on Deploy. 
+
+The live link can be found here [Expense Tracker](https://savory-juction-rz.herokuapp.com/ "Savory Junction").
+
+<div id='technologies'/>
+
+Technologies Used
+=
+
+- ## Languages
+    - Python
+
+- ## Modules
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+
+<div id='credits'/>
+
+Credits
+=
+
+## **Content**
