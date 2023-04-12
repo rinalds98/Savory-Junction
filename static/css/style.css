@@ -133,6 +133,18 @@ label:focus-within ~ label:before {
     margin-right: 5px;
 }
 
+/* Update bookings -- updatebooking.html */
+.delete-area {
+    background-color: rgba(60, 60, 60, 0.6);
+    max-width: 400px;
+    padding: 30px;
+    margin: auto;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Sign Out Page -- logout.html */
 .signout-wrapper {

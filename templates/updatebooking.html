@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="booking-wrapper">
+    <div class="form-input text-center">
+        <form method="post" class="signup-form">
+            {% csrf_token %}
+            <h1>Please Update Your Booking</h1>
+            <div class="mb-3">
+                <label class="form-label" for="{{ form.day.id_for_label }}">Please select a date when that you would
+                    like to change to:</label>
+                <div>
+                    {{ form.day }}
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="{{ form.time.id_for_label }}">Please select a time:</label>
+                <div>
+                    {{ form.time }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Reserve</button>
+        </form>
+    </div>
+
+    <form action="{% url 'delete_booking' booking.id %}" method="post">
+        {% csrf_token %}
+        <div class="delete-area">
+            <p class="text-center">Alternatively if you would like to cancel your reservation.</p>
+            <p class="text-center">Please select the delete button:</p>
+            <div class="delete-button">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#delete-booking">Delete
+                </button>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="delete-booking" tabindex="-1" aria-labelledby="confirm-delete" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirm-delete">Confirm Selection</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete your reservation?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Keep</button>
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

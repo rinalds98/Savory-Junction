@@ -120,7 +120,7 @@ class BookingUpdate(UpdateView):
     # a user can update an existing booking
     model = Booking
     fields = ["day", "time"]
-    template_name = "reservations.html"
+    template_name = "updatebooking.html"
     success_url = reverse_lazy("bookings")
 
     # Changes the day field so the custom date picker gets initialised
