@@ -1,6 +1,11 @@
-from django.shortcuts import render
 from django.shortcuts import redirect
-from django.views.generic import *
+from django.views.generic import (
+    TemplateView,
+    CreateView,
+    ListView,
+    UpdateView,
+    DeleteView,
+)
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Booking, TABLES_AVAILABLE, Review
@@ -95,8 +100,10 @@ class Reservations(ListView):
     context_object_name = "bookings"
 
     def get_queryset(self):
-        return Booking.objects.filter(
-            user=self.request.user).order_by("day", "time")
+        return Booking.objects.filter(user=self.request.user).order_by(
+            "day",
+            "time",
+        )
 
 
 class BookingDelete(DeleteView):

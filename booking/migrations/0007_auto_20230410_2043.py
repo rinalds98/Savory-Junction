@@ -4,25 +4,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('booking', '0006_remove_review_booking'),
+        ("booking", "0006_remove_review_booking"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='booking',
-            name='day',
-            field=models.DateField(default='10/04/2023'),
+            model_name="booking",
+            name="day",
+            field=models.DateField(default="10/04/2023"),
         ),
         migrations.AlterField(
-            model_name='booking',
-            name='time_ordered',
-            field=models.DateTimeField(blank=True, default='10/04/2023'),
+            model_name="booking",
+            name="time_ordered",
+            field=models.DateTimeField(blank=True, default="10/04/2023"),
         ),
         migrations.AlterField(
-            model_name='review',
-            name='date_posted',
-            field=models.DateTimeField(default='10/04/2023'),
+            model_name="review",
+            name="date_posted",
+            field=models.DateTimeField(default="10/04/2023"),
         ),
     ]

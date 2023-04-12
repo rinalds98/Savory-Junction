@@ -5,25 +5,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('booking', '0007_auto_20230410_2043'),
+        ("booking", "0007_auto_20230410_2043"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='booking',
-            name='day',
+            model_name="booking",
+            name="day",
             field=models.DateField(default=datetime.datetime.now),
         ),
         migrations.AlterField(
-            model_name='booking',
-            name='time_ordered',
+            model_name="booking",
+            name="time_ordered",
             field=models.DateTimeField(blank=True, default=datetime.datetime.now),
         ),
         migrations.AlterField(
-            model_name='review',
-            name='date_posted',
+            model_name="review",
+            name="date_posted",
             field=models.DateTimeField(default=datetime.datetime.now),
         ),
     ]
