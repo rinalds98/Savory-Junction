@@ -3,6 +3,9 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .floating {
     position: absolute;
@@ -186,6 +189,11 @@ label:focus-within ~ label:before {
 }
 
 /*footer --base.html*/
+
+.bottom-footer {
+    margin-top: auto;
+}
+
 .social-media-links {
     padding: 0px;
     display: flex;
