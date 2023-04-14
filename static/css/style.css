@@ -7,6 +7,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* Alerts */
 .floating {
     position: absolute;
     top: 100px;
@@ -14,20 +16,22 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+
 /*Home Page -- index.html*/
 .home-wrapper {
     background-color: black;
-    width: 100%;
     position: relative;
+    text-align: center;
+    color: white;
+}
+
+#front-page {
+    opacity: 0.5;
 }
 
 .img {
     width: 100%;
     z-index: 0;
-}
-
-#front-page {
-    opacity: 0.5;
 }
 
 .front-text {
@@ -39,7 +43,7 @@ body {
 
 .front-button {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -213,7 +217,7 @@ label:focus-within ~ label:before {
     color: white;
 }
 
-/*Mobile View*/
+/*Responsive Design, Desktop View */
 @media screen and (min-width:900px) {
 
     .food-menu {
@@ -229,4 +233,24 @@ label:focus-within ~ label:before {
         margin: 0 auto;
         border-top: 5px solid black;
     }
+}
+
+@media screen and (max-width:800px) {
+
+    .front-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .front-button {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: small;
+
+    }
+    
 }
