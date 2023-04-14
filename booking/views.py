@@ -18,6 +18,7 @@ class IndexView(TemplateView):
     This class renders index.html. It also adds
     reviews to the homepage.
     """
+
     template_name = "index.html"
 
     def get_context_data(self, **kwargs):
@@ -51,6 +52,7 @@ class BookingList(CreateView):
     This class renders the reservation.html page. It takes care of
     creating a reservation for the user.
     """
+
     # Initiliases the template and fields.
     model = Booking
     fields = ["day", "time"]
@@ -105,6 +107,7 @@ class Reservations(ListView):
     This class is responsible for showing a list of bookings
     the user has created.
     """
+
     model = Booking
     template_name = "mybookings.html"
     context_object_name = "bookings"
@@ -121,6 +124,7 @@ class BookingDelete(DeleteView):
     """
     This class removes a users booking from the database.
     """
+
     model = Booking
     success_url = reverse_lazy("bookings")
 
@@ -135,6 +139,7 @@ class BookingUpdate(UpdateView):
     updating a reservation for the user. It also checks if the user
     has already booked the specific date or if the restaurant is full.
     """
+
     model = Booking
     fields = ["day", "time"]
     template_name = "updatebooking.html"

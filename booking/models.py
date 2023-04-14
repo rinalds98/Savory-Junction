@@ -35,14 +35,22 @@ class Booking(models.Model):
         on_delete=models.CASCADE,
         related_name="bookings",
     )
-    table_number = models.IntegerField(null=True, blank=True)
-    day = models.DateField(default=datetime.now)
+    table_number = models.IntegerField(
+        null=True,
+        blank=True
+    )
+    day = models.DateField(
+        default=datetime.now
+    )
     time = models.CharField(
         max_length=10,
         choices=TIME_CHOICES,
         default="5:00 PM",
     )
-    time_ordered = models.DateTimeField(default=datetime.now, blank=True)
+    time_ordered = models.DateTimeField(
+        default=datetime.now,
+        blank=True,
+    )
 
     def __str__(self):
         user = self.user.username
@@ -51,12 +59,18 @@ class Booking(models.Model):
 
 
 class Review(models.Model):
-    user_name = models.OneToOneField(User, on_delete=models.CASCADE)
+    user_name = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
     comment = models.TextField()
     rating = models.IntegerField(
-        default=5, validators=[MinValueValidator(1), MaxValueValidator(5)]
+        default=5,
+        validators=[MinValueValidator(1), MaxValueValidator(5)]
     )
-    date_posted = models.DateTimeField(default=datetime.now)
+    date_posted = models.DateTimeField(
+        default=datetime.now
+    )
 
     def __str__(self):
         return f"{self.user_name} - {self.rating} star rating"
