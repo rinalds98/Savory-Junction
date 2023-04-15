@@ -26,36 +26,40 @@ User Experience
 ## **User Stories**
 - ## **As an app owner I want that:**
 
-    1. The website provides an easy and friendly experience when reserving a table
-    2. The website alerts the user when the complete an action ie. register/reserve/update/delete
+    1. The website provides an easy and friendly experience when reserving a table.
+    2. The website alerts the user when the complete an action ie. register/reserve/update/delete.
     3. The website allows the user to have an idea of what cuisine is available and to see previous customer reviews.
 ------
 
 - ## **As an app user I want:**
-    1. To easily understand how to navigate the website
+    1. To easily understand how to navigate the website.
     2. Confident that the reservation system works.
     3. Any actions that the user does gets displayed as alerts.
  ------
 
 - ## **As a returning app user I want:**
-    1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    1. To be able to view/update my reservation.
+    2. To be able to reserve another table.
+    3. To view the menu.
 
 
 # 1. Strategy
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- The main purpose of this website is so users can reserve a table at their desired date and time.
+- Each user creates an account so they can create/read/update/delete their reservation.
 
 # 2. Scope
-- ALorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- After a few design choices. A simple 2-page website (excluding the log-in/log-out pages) was chosen for ease of navigation.
+- Using UX design, mobile responsiveness and simple color profile
 
 # 3. Structure
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+- The user would be greeted with a restaurant image and a call to action button.
+- To create a reservation the user would be prompted to log in or register.
+- The reservation page would a have simple form design for the user to select a desired date and time.
+- The user would be alerted if the booking was successful or that the reservation failed due to the restaurant being full.
+- The user could then see their current reservations on the "manage bookings" page.
+- In the manage bookings page, the user would be allowed to update their reservation which would include either updating the time 
+  of the reservation or deleting the reservation
 
 # 4. Skeleton
 ## **Design**
@@ -65,7 +69,10 @@ User Experience
 
 # 5. Surface
  - ## **Color**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n
+   - The basic color scheme would be dominated by white. With navy/black nav and footer bars. And the images would have a more 
+     dominant orange color.
+   - Buttons to log in/register and make a reservation would be green
+   - To update/delete a reservation they would be red.
 
 <div id='how-to-use'/>
 
@@ -94,7 +101,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Features
 =
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+The website Savory Junction is a simple website that allows the user to create a reservation for the restaurant. Even though it looks very simple on the outside there are a lot of things working in the background so the user can have a pleasant experience while using the website.
 
 - ## **HOMEPAGE**
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
