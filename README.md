@@ -4,11 +4,7 @@ Savory Junction
 Introduction
 =
 
-explanation
-
-
-explantion
-
+Savory Junction is a restaurant website with a fully functioning booking system. Users accessing this website will be able to reserve a table at a date and time that is suitable for them. It also informs the user if the restaurant is full at the selected time and date or if they have already reserved a table at that specific time. Users can also leave a review about their experience at the restaurant and give it a star rating.
 
 The website can be viewed here: [Expense Tracker](https://savory-junction-rz.herokuapp.com/ "javory Junction").
 
@@ -30,15 +26,15 @@ User Experience
 ## **User Stories**
 - ## **As an app owner I want that:**
 
-    1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    1. The website provides an easy and friendly experience when reserving a table
+    2. The website alerts the user when the complete an action ie. register/reserve/update/delete
+    3. The website allows the user to have an idea of what cuisine is available and to see previous customer reviews.
 ------
 
 - ## **As an app user I want:**
-    1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    1. To easily understand how to navigate the website
+    2. Confident that the reservation system works.
+    3. Any actions that the user does gets displayed as alerts.
  ------
 
 - ## **As a returning app user I want:**
