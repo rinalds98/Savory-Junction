@@ -65,7 +65,11 @@ User Experience
 ## **Design**
 - The initial design was made using Wireframes.
 
-![Lucid Charts](/static/images/lucid-chart.png)
+    - ![Wireframe](/static/images/wireframe.png)
+
+- The initial idea of how the system was going to work was sketched on Lucid Charts:
+
+    - ![Lucid Charts](/static/images/lucid-chart.png)
 
 # 5. Surface
  - ## **Color**
@@ -174,7 +178,7 @@ Deployment
 - Link the Heroku app to the repository.
 - Click on Deploy. 
 
-The live link can be found here [Expense Tracker](https://savory-juction-rz.herokuapp.com/ "Savory Junction").
+The live link can be found here [Savory Junction](https://savory-juction-rz.herokuapp.com/ "Savory Junction").
 
 <div id='technologies'/>
 
