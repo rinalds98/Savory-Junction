@@ -24,20 +24,20 @@ User Experience
 =
 
 ## **User Stories**
-- ## **As an app owner I want that:**
+- ## **As an website owner I want that:**
 
     1. The website provides an easy and friendly experience when reserving a table.
     2. The website alerts the user when the complete an action ie. register/reserve/update/delete.
     3. The website allows the user to have an idea of what cuisine is available and to see previous customer reviews.
 ------
 
-- ## **As an app user I want:**
+- ## **As an website user I want:**
     1. To easily understand how to navigate the website.
     2. Confident that the reservation system works.
     3. Any actions that the user does gets displayed as alerts.
  ------
 
-- ## **As a returning app user I want:**
+- ## **As a returning website user I want:**
     1. To be able to view/update my reservation.
     2. To be able to reserve another table.
     3. To view the menu.
@@ -50,7 +50,7 @@ User Experience
 
 # 2. Scope
 - After a few design choices. A simple 2-page website (excluding the log-in/log-out pages) was chosen for ease of navigation.
-- Using UX design, mobile responsiveness and simple color profile
+- Using UX design, mobile responsiveness and simple color profile.
 
 # 3. Structure
 - The user would be greeted with a restaurant image and a call to action button.
@@ -59,19 +59,19 @@ User Experience
 - The user would be alerted if the booking was successful or that the reservation failed due to the restaurant being full.
 - The user could then see their current reservations on the "manage bookings" page.
 - In the manage bookings page, the user would be allowed to update their reservation which would include either updating the time 
-  of the reservation or deleting the reservation
+  of the reservation or deleting the reservation.
 
 # 4. Skeleton
 ## **Design**
-- The initial design was made using Lucid Charts.
+- The initial design was made using Wireframes.
 
-![Lucid Charts](#)
+![Lucid Charts](/static/images/lucid-chart.png)
 
 # 5. Surface
  - ## **Color**
    - The basic color scheme would be dominated by white. With navy/black nav and footer bars. And the images would have a more 
      dominant orange color.
-   - Buttons to log in/register and make a reservation would be green
+   - Buttons to log in/register and make a reservation would be green.
    - To update/delete a reservation they would be red.
 
 <div id='how-to-use'/>
@@ -123,10 +123,12 @@ Future Development
 =
 
 ## **Further Development**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+- Dietary information implementation into reservation.
+- Shows available dates and not just a date to choose.
+
 
  ## **Reasons they are not currently not implemented**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+- Due to the time constraints and scope of the project. I would not have enough time to develop and test these new functions before the project deadline.
 
 
 <div id='testing'/>
@@ -135,10 +137,13 @@ Testing
 =
 
 ## **Solved Bugs**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+- The Star rating system acting weird.
+- Update reservation wasn't updating properly and even tho 10 tables it would create a second reservation for a reserved table.
 
 ## **Unfixed Bugs**
-- No bugs remaining.
+- once a user selects a rating if they click away or decide they want to write a review the star rating selection disappears.
+This is purely aesthetical as the rating the user selected will still be posted to the database.
+The way to fix this would be to use javascript for the star rating system rather then just css.
 
 ## **Validator Testing**
 
@@ -163,7 +168,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Deployment
 =
 
-**The app was deployed using Code Institute's mock terminal for Heroku. The steps to deploy are as follows:**
+**The app was deployed using Code Institute's github template on Heroku. The steps to deploy are as follows:**
 - Create a new Heroku app.
 - Set the buildbacks for Python and NodeJS in that order.
 - Link the Heroku app to the repository.
@@ -177,14 +182,40 @@ Technologies Used
 =
 
 - ## Languages
+    - Html / CSS / Javascript
+    - Django
     - Python
 
+
 - ## Modules
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+Some of the modules used included:
+- Balsamiq Wireframe
+- python Library "Black" - Formating code.
+- python Library "ruff" - Checking for errors.
 
 <div id='credits'/>
 
 Credits
 =
+For insipration and guidance on how a booking system should I work:
+- https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78
+
+Custom datepicker code:
+- https://jqueryui.com/datepicker/
+
+How to add attributes to fields in views.py:
+- http://www.learningaboutelectronics.com/Articles/How-to-add-a-class-or-id-attribute-to-a-Django-form-field.php#:~:text=and%20id%20attributes.-,In%20order%20to%20add%20a%20class%20or%20id%20attribute%20to,%3D%7B'class'%3A'some_class'%7D.
+
 
 ## **Content**
+Main Homepage Image by Nick Karvounis:
+- https://unsplash.com/photos/YH7KYtYMET0
+
+About us section image by Jay Wennington:
+- https://unsplash.com/photos/N_Y88TWmGwA
+
+This service was used to format the website logo in a favicon:
+- https://favicon.io/favicon-converter/
+
+The Restaurant Menu was created using Canva and one of its inbuilt templates:
+- https://www.canva.com/
