@@ -6,11 +6,11 @@ Introduction
 
 Savory Junction is a restaurant website with a fully functioning booking system. Users accessing this website will be able to reserve a table at a date and time that is suitable for them. It also informs the user if the restaurant is full at the selected time and date or if they have already reserved a table at that specific time. Users can also leave a review about their experience at the restaurant and give it a star rating.
 
-The website can be viewed here: [Expense Tracker](https://savory-junction-rz.herokuapp.com/ "javory Junction").
+The website can be viewed here: [Savory Junction](https://savory-junction-rz.herokuapp.com/ "Savory Junction").
 
 # Table of contents
 - [User Experience](#userexperience)
-- [How To Use](#how-to-use)
+- [Agile Development](#agile)
 - [Features](#features)
 - [Future Ideas / Development](#future)
 - [Testing](#testing)
@@ -77,8 +77,9 @@ User Experience
      dominant orange color.
    - Buttons to log in/register and make a reservation would be green.
    - To update/delete a reservation they would be red.
+        - ![Color Scheme](/static/images/color.png)
 
-<div id='how-to-use'/>
+<div id='agile'/>
 
 How To Use
 =
@@ -141,7 +142,7 @@ Testing
 =
 
 ## **Solved Bugs**
-- The Star rating system acting weird.
+- The Star rating system when selecting 2 stars it would light up stars(2, 3, 4, 5) but it should only light up stars (1, 2) It was fixed by using display flex and reversing the order. The checkbox(Stars) values also had to be changed so they would correspond to the correct star.
 - Update reservation wasn't updating properly and even tho 10 tables it would create a second reservation for a reserved table.
 
 ## **Unfixed Bugs**
@@ -153,7 +154,7 @@ The way to fix this would be to use javascript for the star rating system rather
 
 - **Testing**
     - PEP8online.com was down during testing so I installed pycodestyle in VSCode. Then I searched for Linter and selected 'pycodestyle'. This showed if I had any errors which as of deployment is error-free.
-    - The 3 problems that are shown are not related to the project itself. They are from the Code Institute template.
+    - The 2 problems that are shown are not related to the project itself. They are from the Code Institute template.
     
     ![Linter Check](assets/images/errorfree.png)
 
@@ -172,11 +173,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Deployment
 =
 
-**The app was deployed using Code Institute's github template on Heroku. The steps to deploy are as follows:**
+**The website was deployed using Code Institute's github template on Heroku. The steps to deploy are as follows:**
 - Create a new Heroku app.
-- Set the buildbacks for Python and NodeJS in that order.
+- In the settings, enter the following Config Vars:
+    - PORT: 8000
+    - SECRET_KEY: (Enter your secret key)
+    - DATABASE_URL: (Enter the database URL from ElephantSQL)
+    - CLOUNDINARY_URL: (Enter Cloudinary API URL)
 - Link the Heroku app to the repository.
 - Click on Deploy. 
+
 
 The live link can be found here [Savory Junction](https://savory-juction-rz.herokuapp.com/ "Savory Junction").
 
@@ -186,16 +192,23 @@ Technologies Used
 =
 
 - ## Languages
-    - Html / CSS / Javascript
+    - Html
+    - CSS
+    - Javascript
     - Django
     - Python
 
+- ## Frameworks and Tools Used
+    - Django
+    - Bootstrap
+    - ElephantSQL
+    - Cloudinary
+    - Github
+    - Heroku
+    - Balsamiq Wireframes
+    - Python Library "ruff" - Python Linter
+    - Python Library "Black" - Format code to PEP8 compliancy
 
-- ## Modules
-Some of the modules used included:
-- Balsamiq Wireframe
-- python Library "Black" - Formating code.
-- python Library "ruff" - Checking for errors.
 
 <div id='credits'/>
 
