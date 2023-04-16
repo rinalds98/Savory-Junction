@@ -11,6 +11,10 @@ STAR_CHOICES = (
 
 
 class ReviewForm(forms.ModelForm):
+    """
+    This Class is responsible for creating the form on the review section
+    of the homepage.
+    """
     rating = forms.ChoiceField(
         choices=STAR_CHOICES, widget=forms.RadioSelect(attrs={"class": "icon"})
     )

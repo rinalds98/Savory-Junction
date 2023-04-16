@@ -158,21 +158,34 @@ Testing
 
 ## **Solved Bugs**
 - The Star rating system when selecting 2 stars would light up stars(2, 3, 4, 5) but it should only light up stars (1, 2) It was fixed by using display flex and reversing the order. The checkbox(Stars) values also had to be changed so they would correspond to the correct star.
-- Update reservation wasn't updating properly and even though 10 tables would create a 11th reservation for a reserved table.
+- Update reservation wasn't updating properly and even though 10 tables would create an 11th reservation for a reserved table.
 
 ## **Unfixed Bugs**
 - once a user selects a rating if they click away or decide they want to write a review the star rating selection disappears.
 This is purely aesthetical as the rating the user selected will still be posted to the database.
 The way to fix this would be to use javascript for the star rating system rather than just CSS.
-- When a user is selecting a date. They are able to select a date that is in the past.
+- When a user is selecting a date. They can select a date that is in the past.
 
 ## **Validator Testing**
 
-- **Testing**
+- **Python Validation**
     - PEP8online.com was down during testing so I installed pycodestyle in VSCode. Then I searched for Linter and selected 'pycodestyle'. This showed if I had any errors which as of deployment is error-free.
     - The 2 problems that are shown are not related to the project itself. They are from the Code Institute template.
-    
+
     ![Linter Check](/static/images/temperror.png)
+
+    - All code that was written by me in the booking app is pep8 complaint. which are:
+        - admin.py
+        - forms.py
+        - models.py
+        - urls.py
+        - views.py
+    - While checking if everything was pep8 compliant I noticed the Django-provided code inside of the settings.py file was not. I was not able to fix this as the links in the 'AUTH_PASSWORD_VALIDATORS' were too long.
+        - ![settings.py](/static/images/settings.png)
+    
+    - The same situation was also for my env.py file. The links were too long.
+        - ![env.py](/static/images/env.png)
+
 
 - **HTML Validator**
     - I ran my website through  [HTML Validator](https://validator.w3.org/ "HTML Validator") and received no errors.
@@ -189,16 +202,17 @@ The way to fix this would be to use javascript for the star rating system rather
 - **Console Errors**
     - No console errors were found
 
+
 ## **Manual Testing**
 The Following was tested manually and passed:
 - **Navbar**
-    - Savory Junction Logo brings to the user back to the homepage.
+    - Savory Junction Logo brings the user back to the homepage.
     - User logged out:
         - Home link - works as intended bringing the user back to the home page.
         - Create a booking - brings the user to the create a booking page.
         - Log-In/Register - brings the user to the respective pages.
         - Does not show 'Manage Bookings' or 'Log-Out' nav links
-    - User logged In:
+    - User Logged In:
         - Home link - works as intended bringing the user back to the home page.
         - Create a booking - brings the user to the create a booking page.
         - Manage Bookings - brings the user to the manage bookings page.
