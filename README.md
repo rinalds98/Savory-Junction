@@ -164,6 +164,7 @@ Testing
 - once a user selects a rating if they click away or decide they want to write a review the star rating selection disappears.
 This is purely aesthetical as the rating the user selected will still be posted to the database.
 The way to fix this would be to use javascript for the star rating system rather than just CSS.
+- When a user is selecting a date. They are able to select a date that is in the past.
 
 ## **Validator Testing**
 
