@@ -8,6 +8,8 @@ $( function() {
 // stay on the screen forever.
 setTimeout(function(){
   let messages = document.getElementById("msg");
+  console.log(messages)
   let alert = new bootstrap.Alert(messages);
+  console.log(alert)
   alert.close();
 },3000);

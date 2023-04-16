@@ -21,7 +21,7 @@
                     {{ form.time }}
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Reserve</button>
+            <button type="submit" class="btn btn-success">Reserve</button>
         </form>
     </div>
 </div>
@@ -33,7 +33,7 @@
     <p>To continue we will need you to either log in if you are an existing customer.</p>
     <a class="btn btn-success" href="{% url 'account_login' %}">LOG IN</a>
     <p>Or if its your first time here. Please create an account before you can book a time.</p>
-    <a class="btn btn-primary" href="{% url 'account_signup' %}">REGISTER</a>
+    <a class="btn btn-success" href="{% url 'account_signup' %}">REGISTER</a>
 </div>
 {% endif %}
 {% endblock %}

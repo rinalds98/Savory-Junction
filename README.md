@@ -49,7 +49,7 @@ User Experience
 - Each user creates an account so they can create/read/update/delete their reservation.
 
 # 2. Scope
-- After a few design choices. A simple 2-page website (excluding the log-in/log-out pages) was chosen for ease of navigation.
+- After a few design choices. A simple 3-page layout for users logged in and 2-page layout for users logged out (excluding the log-in/log-out pages) was chosen for ease of navigation.
 - Using UX design, mobile responsiveness, and simple color profile.
 
 # 3. Structure
@@ -123,7 +123,7 @@ The website Savory Junction is a simple website that allows the user to create a
 
 - ## **Manage Reservations**
     - After the user has created a booking. They can go to manage their reservations in the manage booking section. It shows the time and date that the user selected. They can also update the reservation. If no bookings have been found it will display a text saying 'no bookings found' 
-        - ![Manage Reservations](/static/images/manage.png)
+        -![Manage Reservations](/static/images/manage.png)
 
 - ## **Update Reservations**
     - If the user wishes to update their reservation they have a choice of updating the date and time but also deleting the reservation in case they wish to cancel.
@@ -145,9 +145,9 @@ Future Development
 ## **Further Development**
 - Dietary information implementation into the reservation.
 - Shows available dates and not just a date to choose.
-- Users being able to update and delete their reviews.
-- Users being able to delete their accounts.
-- Users would be able to select how many guests they want to bring and in turn get a table that can seat all the guests.
+- Users can update and delete their reviews.
+- Users can delete their accounts.
+- Users would be able to select how many guests they want to bring and in turn, get a table that can seat all the guests.
 
 
  ## **Reasons they are not currently not implemented**
@@ -199,11 +199,12 @@ The way to fix this would be to use javascript for the star rating system rather
     ![CSS Check](/static/images/cssvalidator.png)
 
 - **JS Validator**
-    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery.
-    ![jS Check](/static/images/jsvalidator.png)
+    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery. and an issue with bootstrap being undefined. But together with the console error I assume this is a bootstrap issue due to the console log error going back to bootstrap alert.js
+    ![jS Check](/static/images/jshintvalidator.png)
 
 - **Console Errors**
-    - No console errors were found
+    - There is one error that shows up in the console. The code does what it is supposed to do but from researching online it seems to be an issue from bootstrap alert.js
+    ![Console Log](/static/images/consoleerror.png)
 
 
 ## **Manual Testing**
@@ -287,6 +288,8 @@ The Following was tested manually and passed:
     - All social media icons work as intended bringing the user to the correct social media website.
     - each social media link has a 'target="_blank"' so it opens a new tab instead of navigating away from the website.
 
+- **Alerts**
+    - Alerts have been programmed to disappear after 3 seconds which is True.
 
 <div id='deployment'/>
 
@@ -315,7 +318,6 @@ Technologies Used
     - Html
     - CSS
     - Javascript
-    - Django
     - Python
 
 - ## Frameworks and Tools Used
