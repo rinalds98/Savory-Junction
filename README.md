@@ -24,14 +24,14 @@ User Experience
 =
 
 ## **User Stories**
-- ## **As an website owner I want that:**
+- ## **As a website owner I want that:**
 
     1. The website provides an easy and friendly experience when reserving a table.
-    2. The website alerts the user when the complete an action ie. register/reserve/update/delete.
+    2. The website alerts the user when they complete an action ie. register/reserve/update/delete.
     3. The website allows the user to have an idea of what cuisine is available and to see previous customer reviews.
 ------
 
-- ## **As an website user I want:**
+- ## **As a website user I want:**
     1. To easily understand how to navigate the website.
     2. Confident that the reservation system works.
     3. Any actions that the user does gets displayed as alerts.
@@ -50,7 +50,7 @@ User Experience
 
 # 2. Scope
 - After a few design choices. A simple 2-page website (excluding the log-in/log-out pages) was chosen for ease of navigation.
-- Using UX design, mobile responsiveness and simple color profile.
+- Using UX design, mobile responsiveness, and simple color profile.
 
 # 3. Structure
 - The user would be greeted with a restaurant image and a call to action button.
@@ -85,19 +85,19 @@ Agile Development
 =
 
 ## Introduction
-This project was developed using agile development by adding small features during the length of the project. All user stories were assigned labels (Must Have, Should Have, Could Have). They were assigned based on importance to the project and its functunality.
+This project was developed using agile development by adding small features during the length of the project. All user stories were assigned labels (Must Have, Should Have, Could Have). They were assigned based on the importance of the project and its functionality.
 
-The Kan Ban board can be accessed from the following link -
+The KanBan board can be accessed from the following link -
 [Kan Ban Board](https://github.com/users/rinalds98/projects/3/views/1 "Kan Ban Board")
 
 
-A kanban board was created using Github projects where all the user stories were shown in a card format.
+A Kanban board was created using GitHub projects where all the user stories were shown in a card format.
 - ![Kan Ban Board](/static/images/kanban.png)
 
  ## **Reasons some User Stories currently not implemented**
-- The user story related to date availibility was not fully implmented. While users can choose a date and time. They won't be informed that it's booked until the click the submit button. Although this would enhance the user experience, I decided it would be a lower priority (Could Have Label) as the main focus was on website functionality.
+- The user story related to date availability was not fully implemented. While users can choose a date and time. They won't be informed that it's booked until they click the submit button. Although this would enhance the user experience, I decided it would be a lower priority (Could Have Label) as the main focus was on website functionality.
 
-- The user story related to Dietary information was not added due to it being a lower priority and deemed not being neccesary for creating a reservation at the restaurant. 
+- The user story related to Dietary information was not added due to it being a lower priority and deemed not necessary for creating a reservation at the restaurant. 
 
 Due to the time constraints and scope of the project. I would not have enough time to develop and test these new functions before the project deadline.
 
@@ -110,32 +110,32 @@ Features
 The website Savory Junction is a simple website that allows the user to create a reservation for the restaurant. Even though it looks very simple on the outside there are a lot of things working in the background so the user can have a pleasant experience while using the website.
 
 - ## **Home Page**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![Homepage](/static/images/homepage.png)
+    - When the user first access the website he is greeted with a simple homepage design with a background image of the restaurant. The name of the restaurant and a call to action to make a reservation. There is also a Nav bar to access different parts of the website such as creating a booking, Managing a booking, and Log-In/Log-Out/Register buttons depending on the user's status.
+        - ![Homepage](/static/images/homepage.png)
 
 - ## **Review Section**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![Review Section](/static/images/review.png)
+    - The review section first shows customer reviews in a card style using Bootstrap. The user can add a comment and a star rating. The section where the review is created can only be accessed when logged in.
+        - ![Review Section](/static/images/review.png)
 
 - ## **Create a Reservation**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![create Reservations](/static/images/createreservation.png)
+    - The Create a Booking section has a very simplistic design. It allows the user to select a date with a date picker and then the specific time that they wish to reserve.
+        - ![create Reservations](/static/images/createreservation.png)
 
 - ## **Manage Reservations**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![Manage Reservations](/static/images/manage.png)
+    - After the user has created a booking. They can go to manage their reservations in the manage booking section. It shows the time and date that the user selected. They can also update the reservation. If no bookings have been found it will display a text saying 'no bookings found' 
+        - ![Manage Reservations](/static/images/manage.png)
 
 - ## **Update Reservations**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![Update Reservations](/static/images/update.png)
+    - If the user wishes to update their reservation they have a choice of updating the date and time but also deleting the reservation in case they wish to cancel.
+        - ![Update Reservations](/static/images/update.png)
 
 - ## **Validate Selection**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![Confirmation](/static/images/modal.png)
+    - There is a built-in modal from Bootstrap that is a failsafe in case the user clicks the delete button by accident. It allows the user to confirm whether to delete the reservation or keep it.
+        - ![Confirmation](/static/images/modal.png)
 
 - ## **Footer**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-    ![Confirmation](/static/images/footer.png)
+    - A very simple footer was chosen with social media icons that link to the business's social accounts. they use 'target=_blank' so if the user clicks they won't navigate anyway from the website.
+        - ![Confirmation](/static/images/footer.png)
 
 <div id='future'/>
 
@@ -143,7 +143,7 @@ Future Development
 =
 
 ## **Further Development**
-- Dietary information implementation into reservation.
+- Dietary information implementation into the reservation.
 - Shows available dates and not just a date to choose.
 
 
@@ -157,13 +157,13 @@ Testing
 =
 
 ## **Solved Bugs**
-- The Star rating system when selecting 2 stars it would light up stars(2, 3, 4, 5) but it should only light up stars (1, 2) It was fixed by using display flex and reversing the order. The checkbox(Stars) values also had to be changed so they would correspond to the correct star.
-- Update reservation wasn't updating properly and even tho 10 tables it would create a second reservation for a reserved table.
+- The Star rating system when selecting 2 stars would light up stars(2, 3, 4, 5) but it should only light up stars (1, 2) It was fixed by using display flex and reversing the order. The checkbox(Stars) values also had to be changed so they would correspond to the correct star.
+- Update reservation wasn't updating properly and even though 10 tables would create a second reservation for a reserved table.
 
 ## **Unfixed Bugs**
 - once a user selects a rating if they click away or decide they want to write a review the star rating selection disappears.
 This is purely aesthetical as the rating the user selected will still be posted to the database.
-The way to fix this would be to use javascript for the star rating system rather then just css.
+The way to fix this would be to use javascript for the star rating system rather than just CSS.
 
 ## **Validator Testing**
 
@@ -171,24 +171,84 @@ The way to fix this would be to use javascript for the star rating system rather
     - PEP8online.com was down during testing so I installed pycodestyle in VSCode. Then I searched for Linter and selected 'pycodestyle'. This showed if I had any errors which as of deployment is error-free.
     - The 2 problems that are shown are not related to the project itself. They are from the Code Institute template.
     
-    ![Linter Check](assets/images/errorfree.png)
+    ![Linter Check](/static/images/temperror.png)
 
 ## **Manual Testing**
 The Following was tested manually and passed:
+- **Navbar**
 
-- **Username Input**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-- **Options**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-- **BOOKINGS**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+- **Homepage**
+    - Call to action button
+        - 'Make a reservation' button works as intended - brings the user to the Create a Booking page.
+    - If the user is not logged in
+        - The review section of the home page will only show reviews posted. If the user wants to leave a review they will need to log in
+        - The log-In button works as intended, bringing the user to the Log-In page.
+
+- **Review Section**
+    - If the user is logged in there will be a star rating system and text area for a user to leave a review
+    - Trying to post a review without selecting a star and inputting text in the text area. The user will get a "please select one of the options" and "please fill out this field"
+    - If the user has already posted a review they will get an alert that states they have already made a review.
+
+- **Create a Reservation**
+    - User Logged Out:
+        - They will not be able to create a reservation. They will be asked to Log-In/Register.
+        - Log-In/Register buttons work as intended bringing the user to the intended destination.
+    - User Logged In:
+        - The user can select a time to reserve a booking.
+        - Date picker works as intended showing a calendar to choose a date.
+        - The reserve button works as intended submitting the user's reservation details to the database.
+    - Reservations:
+        - If all tables are booked for a specific date and time the user will get an alert stating that all tables are booked.
+        - If the user has already booked that specific time. They will receive an alert stating they have already booked a table at this time.
+        - If a table is available and the user hasn't already booked the specific time the user will get an alert 'booking made successfully'
+
+- **manage Bookings**
+    - User Logged Out:
+        - They will not be able to access 'manage bookings'
+    - User Logged In:
+        - The update button works as intended which will bring them to the update page.
+
+- **Update Bookings**
+    - The user can select a time to update a booking.
+    - Date picker works as intended showing a calendar to choose a date.
+    - The reserve button works as intended submitting the user's updated reservation details to the database.
+    - Delete button - when clicked brings up a modal that asks for confirmation to delete a reservation.
+
+    - Modal Buttons
+        - Keep Button - Cancels the delete request.
+        - Delete Button - deletes the user's reservation.
+
+- **Log-In/Log-Out/Register Pages**
+- The log-In/Log-Out/Register sections are managed by OAuth Library
+
+    - **Register page**
+        - If a username has already been used the user will get an error stating that a user already exists with that name.
+        - The user is required to have a username and password.
+        - The password confirmation has to match.
+        - The password can't be simple or a common name.
+        - The sign-up button registers the user's account and they are logged in.
+        - The sign-in link brings the user to the Log-In page.
+    
+    - **Log-In Page**
+        - The user is required to have a username and password.
+        - The password has to be correct.
+        - The sign-up link brings the user to the register page.
+        - The sign-in button logs the user on.
+    
+    - **Log Out Page**
+        - Sign out page works as intended logging the user out of their account.
+
+- **Footer**
+    - All social media icons work as intended bringing the user to the correct social media website.
+    - each social media link has a 'target="_blank"' so it opens a new tab instead of navigating away from the website.
+
 
 <div id='deployment'/>
 
 Deployment
 =
 
-**The website was deployed using Code Institute's github template on Heroku. The steps to deploy are as follows:**
+**The website was deployed using Code Institute's GitHub template on Heroku. The steps to deploy are as follows:**
 - Create a new Heroku app.
 - In the settings, enter the following Config Vars:
     - PORT: 8000
@@ -223,13 +283,14 @@ Technologies Used
     - Balsamiq Wireframes
     - Python Library "ruff" - Python Linter
     - Python Library "Black" - Format code to PEP8 compliancy
+    - OAuth - Account Management
 
 
 <div id='credits'/>
 
 Credits
 =
-For insipration and guidance on how a booking system should I work:
+For inspiration and guidance on how a booking system should work:
 - https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78
 
 Custom datepicker code:
@@ -243,7 +304,7 @@ How to add attributes to fields in views.py:
 Main Homepage Image by Nick Karvounis:
 - https://unsplash.com/photos/YH7KYtYMET0
 
-About us section image by Jay Wennington:
+About Us section image by Jay Wennington:
 - https://unsplash.com/photos/N_Y88TWmGwA
 
 This service was used to format the website logo in a favicon:
