@@ -158,7 +158,7 @@ Testing
 
 ## **Solved Bugs**
 - The Star rating system when selecting 2 stars would light up stars(2, 3, 4, 5) but it should only light up stars (1, 2) It was fixed by using display flex and reversing the order. The checkbox(Stars) values also had to be changed so they would correspond to the correct star.
-- Update reservation wasn't updating properly and even though 10 tables would create a second reservation for a reserved table.
+- Update reservation wasn't updating properly and even though 10 tables would create a 11th reservation for a reserved table.
 
 ## **Unfixed Bugs**
 - once a user selects a rating if they click away or decide they want to write a review the star rating selection disappears.
@@ -176,17 +176,28 @@ The way to fix this would be to use javascript for the star rating system rather
 ## **Manual Testing**
 The Following was tested manually and passed:
 - **Navbar**
+    - User logged out:
+        - Home link - works as intended bringing the user back to the home page.
+        - Create a booking - brings the user to the create a booking page.
+        - Log-In/Register - brings the user to the respective pages.
+        - Does not show 'Manage Bookings' or 'Log-Out' nav links
+    - User logged In:
+        - Home link - works as intended bringing the user back to the home page.
+        - Create a booking - brings the user to the create a booking page.
+        - Manage Bookings - brings the user to the manage bookings page.
+        - Log-Out - brings the user to the log-Out page.
+        - Does not show 'Log-In' or 'Register' nav links.
 
 - **Homepage**
     - Call to action button
         - 'Make a reservation' button works as intended - brings the user to the Create a Booking page.
-    - If the user is not logged in
-        - The review section of the home page will only show reviews posted. If the user wants to leave a review they will need to log in
+    - If the user is not logged in.
+        - The review section of the home page will only show reviews posted. If the user wants to leave a review they will need to log in.
         - The log-In button works as intended, bringing the user to the Log-In page.
 
 - **Review Section**
-    - If the user is logged in there will be a star rating system and text area for a user to leave a review
-    - Trying to post a review without selecting a star and inputting text in the text area. The user will get a "please select one of the options" and "please fill out this field"
+    - If the user is logged in there will be a star rating system and text area for a user to leave a review.
+    - Trying to post a review without selecting a star and inputting text in the text area. The user will get a "please select one of the options" and "please fill out this field".
     - If the user has already posted a review they will get an alert that states they have already made a review.
 
 - **Create a Reservation**
@@ -200,11 +211,11 @@ The Following was tested manually and passed:
     - Reservations:
         - If all tables are booked for a specific date and time the user will get an alert stating that all tables are booked.
         - If the user has already booked that specific time. They will receive an alert stating they have already booked a table at this time.
-        - If a table is available and the user hasn't already booked the specific time the user will get an alert 'booking made successfully'
+        - If a table is available and the user hasn't already booked the specific time the user will get an alert 'booking made successfully'.
 
 - **manage Bookings**
     - User Logged Out:
-        - They will not be able to access 'manage bookings'
+        - They will not be able to access 'manage bookings'.
     - User Logged In:
         - The update button works as intended which will bring them to the update page.
 
@@ -219,7 +230,7 @@ The Following was tested manually and passed:
         - Delete Button - deletes the user's reservation.
 
 - **Log-In/Log-Out/Register Pages**
-- The log-In/Log-Out/Register sections are managed by OAuth Library
+- The log-In/Log-Out/Register sections are managed by OAuth Library.
 
     - **Register page**
         - If a username has already been used the user will get an error stating that a user already exists with that name.
