@@ -52,6 +52,7 @@ class BookingList(CreateView):
     This class renders the reservation.html page. It takes care of
     creating a reservation for the user.
     """
+
     # Initiliases the template and fields.
     model = Booking
     fields = ["day", "time"]
@@ -110,6 +111,7 @@ class Reservations(ListView):
     This class renders the mybookings.html page. It is responsible for
     showing a list of bookings the user has created.
     """
+
     # Initiliases the template and fields.
     model = Booking
     template_name = "mybookings.html"
@@ -142,6 +144,7 @@ class BookingUpdate(UpdateView):
     updating a reservation for the user. It also checks if the user
     has already booked the specific date or if the restaurant is full.
     """
+
     # Initiliases the template and fields.
     model = Booking
     fields = ["day", "time"]

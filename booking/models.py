@@ -34,18 +34,14 @@ class Booking(models.Model):
     This Model Class creates the user,
     table number, day, time and when the booking was created
     """
+
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
         related_name="bookings",
     )
-    table_number = models.IntegerField(
-        null=True,
-        blank=True
-    )
-    day = models.DateField(
-        default=datetime.now
-    )
+    table_number = models.IntegerField(null=True, blank=True)
+    day = models.DateField(default=datetime.now)
     time = models.CharField(
         max_length=10,
         choices=TIME_CHOICES,
@@ -68,18 +64,16 @@ class Review(models.Model):
     so a user can post and view reviews. It takes in
     user, comment, rating and when it was posted.
     """
+
     user_name = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
     )
     comment = models.TextField()
     rating = models.IntegerField(
-        default=5,
-        validators=[MinValueValidator(1), MaxValueValidator(5)]
+        default=5, validators=[MinValueValidator(1), MaxValueValidator(5)]
     )
-    date_posted = models.DateTimeField(
-        default=datetime.now
-    )
+    date_posted = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
         return f"{self.user_name} - {self.rating} star rating"

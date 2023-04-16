@@ -199,12 +199,16 @@ The way to fix this would be to use javascript for the star rating system rather
     ![CSS Check](/static/images/cssvalidator.png)
 
 - **JS Validator**
-    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery. and an issue with bootstrap being undefined. But together with the console error I assume this is a bootstrap issue due to the console log error going back to bootstrap alert.js
+    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery. An issue with bootstrap being undefined but because I am using bootstrap javascript I assume that's the reason why.
     ![jS Check](/static/images/jshintvalidator.png)
 
 - **Console Errors**
-    - There is one error that shows up in the console. The code does what it is supposed to do but from researching online it seems to be an issue from bootstrap alert.js
-    ![Console Log](/static/images/consoleerror.png)
+    - There was no console errors found.
+    ![Console Check](/static/images/errorfree.png)
+
+- **Lighthouse Check**
+    - This was my Lighthouse check
+    ![lighthouse Check](/static/images/lighthouse.png)
 
 
 ## **Manual Testing**
