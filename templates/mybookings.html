@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- My bookings section that shows a users bookings -->
 <div class="text-center">
     <h2>Your Reservations</h2>
 
@@ -29,8 +30,7 @@
                 <td>{{ booking.time }}</td>
                 <td>
                     <div class="actions">
-                        <a href="{% url 'update_booking' booking.pk%}"
-                        class="btn btn-danger btn-sm">Update</a>
+                        <a href="{% url 'update_booking' booking.pk%}" class="btn btn-danger btn-sm">Update</a>
                     </div>
                 </td>
             </tr>

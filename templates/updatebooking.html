@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<!-- This page shows the user the update booking form to be able to update a time and date -->
 <div class="booking-wrapper">
     <div class="form-input text-center">
         <form method="post" class="signup-form">
@@ -23,7 +23,7 @@
             <button type="submit" class="btn btn-primary">Reserve</button>
         </form>
     </div>
-
+    <!--This section asks if the user wants to delete their reservation-->
     <form action="{% url 'delete_booking' booking.id %}" method="post">
         {% csrf_token %}
         <div class="delete-area">

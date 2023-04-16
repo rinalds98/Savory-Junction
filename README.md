@@ -26,20 +26,20 @@ User Experience
 ## **User Stories**
 - ## **As a website owner I want that:**
 
-    1. The website provides an easy and friendly experience when reserving a table.
+    1. The website provides an easy and friendly experience when reserving a table. (Booking System)
     2. The website alerts the user when they complete an action ie. register/reserve/update/delete.
-    3. The website allows the user to have an idea of what cuisine is available and to see previous customer reviews.
+    3. The website allows the user to have an idea of what cuisine is available and to see previous customer reviews. (Review System)
 ------
 
 - ## **As a website user I want:**
-    1. To easily understand how to navigate the website.
-    2. Confident that the reservation system works.
+    1. To easily understand how to navigate the website (Site Pagination).
+    2. Confident that the reservation system works (Booking System and Manage Bookings).
     3. Any actions that the user does gets displayed as alerts.
  ------
 
 - ## **As a returning website user I want:**
-    1. To be able to view/update my reservation.
-    2. To be able to reserve another table.
+    1. To be able to view/update my reservation. (manage bookings)
+    2. To be able to reserve another table. (Booking System)
     3. To view the menu.
 
 
@@ -145,6 +145,9 @@ Future Development
 ## **Further Development**
 - Dietary information implementation into the reservation.
 - Shows available dates and not just a date to choose.
+- Users being able to update and delete their reviews.
+- Users being able to delete their accounts.
+- Users would be able to select how many guests they want to bring and in turn get a table that can seat all the guests.
 
 
  ## **Reasons they are not currently not implemented**
