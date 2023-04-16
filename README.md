@@ -6,7 +6,7 @@ Introduction
 
 Savory Junction is a restaurant website with a fully functioning booking system. Users accessing this website will be able to reserve a table at a date and time that is suitable for them. It also informs the user if the restaurant is full at the selected time and date or if they have already reserved a table at that specific time. Users can also leave a review about their experience at the restaurant and give it a star rating.
 
-The website can be viewed here: [Savory Junction](https://savory-junction-rz.herokuapp.com/ "Savory Junction").
+The website can be viewed here: [Savory Junction](https://savory-junction.herokuapp.com/ "Savory Junction").
 
 # Table of contents
 - [User Experience](#userexperience)
@@ -81,24 +81,25 @@ User Experience
 
 <div id='agile'/>
 
-How To Use
+Agile Development
 =
 
-## Data Used
- - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
- - Lorem ipsum dolor sit amet, consectetur adipiscing elit,
- ## - Income Data
- ![photo](#) 
+## Introduction
+This project was developed using agile development by adding small features during the length of the project. All user stories were assigned labels (Must Have, Should Have, Could Have). They were assigned based on importance to the project and its functunality.
 
- ## - Expense Data
- ![photo](#)
+The Kan Ban board can be accessed from the following link -
+[Kan Ban Board](https://github.com/users/rinalds98/projects/3/views/1 "Kan Ban Board")
 
-# 1. Upon Accessing Site
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-# 2. Home Page
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-# 3. Options
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+
+A kanban board was created using Github projects where all the user stories were shown in a card format.
+- ![Kan Ban Board](/static/images/kanban.png)
+
+ ## **Reasons some User Stories currently not implemented**
+- The user story related to date availibility was not fully implmented. While users can choose a date and time. They won't be informed that it's booked until the click the submit button. Although this would enhance the user experience, I decided it would be a lower priority (Could Have Label) as the main focus was on website functionality.
+
+- The user story related to Dietary information was not added due to it being a lower priority and deemed not being neccesary for creating a reservation at the restaurant. 
+
+Due to the time constraints and scope of the project. I would not have enough time to develop and test these new functions before the project deadline.
 
 
 <div id='features'/>
@@ -184,7 +185,7 @@ Deployment
 - Click on Deploy. 
 
 
-The live link can be found here [Savory Junction](https://savory-juction-rz.herokuapp.com/ "Savory Junction").
+The live link can be found here [Savory Junction](https://savory-junction.herokuapp.com/ "Savory Junction").
 
 <div id='technologies'/>
 
