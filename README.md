@@ -173,9 +173,17 @@ The way to fix this would be to use javascript for the star rating system rather
     
     ![Linter Check](/static/images/temperror.png)
 
+- **HTML Validator**
+    - I ran my website through  [HTML Validator](https://validator.w3.org/ "HTML Validator") and received no errors.
+    ![HTML Check](/static/images/htmlvalidator.png)
+- **CSS Validator**
+    - I ran my website through  [CSS Validator](https://jigsaw.w3.org/css-validator/ "CSS Validator") and received no errors.
+    ![HTML Check](/static/images/cssvalidator.png)
+
 ## **Manual Testing**
 The Following was tested manually and passed:
 - **Navbar**
+    - Savory Junction Logo brings to the user back to the homepage.
     - User logged out:
         - Home link - works as intended bringing the user back to the home page.
         - Create a booking - brings the user to the create a booking page.

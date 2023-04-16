@@ -1,4 +1,5 @@
 // This function provides a custom datepicker for reservations.
+// This function was taken from https://jqueryui.com/datepicker/
 $( function() {
     $( "#datepicker" ).datepicker();
   } );
@@ -7,6 +8,6 @@ $( function() {
 // stay on the screen forever.
 setTimeout(function(){
   let messages = document.getElementById("msg");
-  let alert = new bootstrap.Alert(messages);
+  let alert = new alert(messages);
   alert.close();
 },3000);
