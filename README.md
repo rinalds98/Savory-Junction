@@ -176,9 +176,17 @@ The way to fix this would be to use javascript for the star rating system rather
 - **HTML Validator**
     - I ran my website through  [HTML Validator](https://validator.w3.org/ "HTML Validator") and received no errors.
     ![HTML Check](/static/images/htmlvalidator.png)
+
 - **CSS Validator**
     - I ran my website through  [CSS Validator](https://jigsaw.w3.org/css-validator/ "CSS Validator") and received no errors.
-    ![HTML Check](/static/images/cssvalidator.png)
+    ![CSS Check](/static/images/cssvalidator.png)
+
+- **JS Validator**
+    - I ran my website through  [JS Validator](https://jshint.com/ "JS Validator") and received no errors only undefined $ for jquery.
+    ![jS Check](/static/images/jsvalidator.png)
+
+- **Console Errors**
+    - No console errors were found
 
 ## **Manual Testing**
 The Following was tested manually and passed:
@@ -318,6 +326,11 @@ Custom datepicker code:
 How to add attributes to fields in views.py:
 - http://www.learningaboutelectronics.com/Articles/How-to-add-a-class-or-id-attribute-to-a-Django-form-field.php#:~:text=and%20id%20attributes.-,In%20order%20to%20add%20a%20class%20or%20id%20attribute%20to,%3D%7B'class'%3A'some_class'%7D.
 
+Refresh on classes from Corey Schafer:
+- https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g
+
+How to use super() functions in classes by Sebastiaan Mathôt:
+- https://www.youtube.com/watch?v=zS0HyfN7Pm4&ab_channel=SebastiaanMath%C3%B4t
 
 ## **Content**
 Main Homepage Image by Nick Karvounis:

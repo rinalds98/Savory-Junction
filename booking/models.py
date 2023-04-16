@@ -30,6 +30,10 @@ TIME_CHOICES = (
 
 
 class Booking(models.Model):
+    """
+    This Model Class creates the user,
+    table number, day, time and when the booking was created
+    """
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -59,6 +63,11 @@ class Booking(models.Model):
 
 
 class Review(models.Model):
+    """
+    This class model takes care of the review section
+    so a user can post and view reviews. It takes in
+    user, comment, rating and when it was posted.
+    """
     user_name = models.OneToOneField(
         User,
         on_delete=models.CASCADE,

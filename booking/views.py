@@ -107,8 +107,8 @@ class BookingList(CreateView):
 
 class Reservations(ListView):
     """
-    This class is responsible for showing a list of bookings
-    the user has created.
+    This class renders the mybookings.html page. It is responsible for
+    showing a list of bookings the user has created.
     """
     # Initiliases the template and fields.
     model = Booking
